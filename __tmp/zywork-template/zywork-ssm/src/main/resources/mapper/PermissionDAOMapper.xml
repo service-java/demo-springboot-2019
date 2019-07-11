@@ -1,0 +1,32 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.zywork.dao.PermissionDAO">
+    <resultMap type="permissionDO" id="permissionMap">
+    </resultMap>
+
+    <select id="listByRoleIds" resultType="permissionDO">
+        <![CDATA[
+			select distinct p.* from t_permission p
+			join t_role_permission rp on p.id = rp.permission_id
+			and rp.role_id in
+		]]>
+        <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="listByAccount" resultType="permissionDO">
+		<![CDATA[
+
+			select distinct p.* from t_permission p
+			join t_role_permission rp on p.id = rp.permission_id
+			join t_user_role ur on rp.role_id = ur.role_id
+			join t_user u on u.id = ur.user_id and
+			(u.email = #{account} or u.phone = #{account} or u.account_name = #{account})
+
+        ]]>
+	</select>
+
+</mapper>

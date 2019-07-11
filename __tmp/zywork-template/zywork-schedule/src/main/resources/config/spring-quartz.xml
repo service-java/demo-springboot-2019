@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="top.zywork.job"/>
+
+    <bean id="helloJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="name" value="helloJobDetail"/>
+        <property name="group" value="group1"/>
+        <property name="targetObject" ref="helloJob"/>
+        <property name="targetMethod" value="run"/>
+    </bean>
+
+    <bean id="helloJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+        <property name="name" value="helloJobTrigger"/>
+        <property name="group" value="group1"/>
+        <property name="jobDetail" ref="helloJobDetail"/>
+        <property name="repeatInterval" value="5000"/>
+    </bean>
+
+    <bean id="surpriseJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="name" value="surpriseJobDetail"/>
+        <property name="group" value="group1"/>
+        <property name="jobClass" value="top.zywork.job.SurpriseJob"/>
+        <property name="durability" value="true"/>
+        <property name="jobDataAsMap">
+            <map>
+                <entry key="name" value="test"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="surpriseJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="name" value="surpriseJobTrigger"/>
+        <property name="group" value="group1"/>
+        <property name="jobDetail" ref="surpriseJobDetail"/>
+        <property name="cronExpression" value="0/5 * * * * ?"/>
+    </bean>
+
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="jobDetails">
+            <list>
+                <ref bean="helloJobDetail"/>
+                <ref bean="surpriseJobDetail"/>
+            </list>
+        </property>
+        <property name="triggers">
+            <list>
+                <ref bean="helloJobTrigger"/>
+                <ref bean="surpriseJobTrigger"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="top.zywork.dos">
+    <class name="PermissionDO" table="t_permission">
+        <id name="id" column="id"/>
+        <property name="title" column="title"/>
+        <property name="permission" column="permission"/>
+        <property name="description" column="description"/>
+        <property name="createTime" column="create_time"/>
+        <property name="isActive" column="is_active"/>
+
+        <many-to-one name="moduleDO" column="module_id" class="top.zywork.dos.ModuleDO"/>
+
+        <set name="rolePermissionDOSet">
+            <key column="permission_id"/>
+            <one-to-many class="top.zywork.dos.RolePermissionDO"/>
+        </set>
+
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <constant name="struts.custom.i18n.resources" value="i18n/messages"/>
+    <constant name="struts.multipart.saveDir" value="uploads"/>
+    <constant name="struts.multipart.maxSize" value="104857600"/>
+    <constant name="struts.serve.static" value="false"/>
+    <constant name="struts.convention.action.packages" value="top.zywork.controller"/>
+    <constant name="struts.action.excludePattern" value="/socket/.*"/>
+
+    <constant name="struts.objectFactory" value="spring"/>
+
+    <package name="base-package" extends="json-default">
+        <global-results>
+            <result name="error">/WEB-INF/view/common/error.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+    </package>
+
+</struts>

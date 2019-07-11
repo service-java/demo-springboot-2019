@@ -1,0 +1,25 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.zywork.dao.TemplateDAO">
+    <resultMap type="templateDO" id="templdateMap">
+    </resultMap>
+
+    <insert id="save" parameterType="templateDO">
+		<![CDATA[
+
+			insert into t_template(name, password) values(#{name}, #{password})
+
+        ]]>
+	</insert>
+
+    <insert id="save1" parameterType="templateDO">
+        <![CDATA[
+
+			insert into t_template(name, password) values(#{name}, #{password})
+
+        ]]>
+    </insert>
+
+</mapper>

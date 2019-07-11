@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="06d776ba-a28f-45f5-972b-56bb7601193e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="quantity" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="20" width="120" height="30" uuid="8814aba1-afe3-4330-953b-3bdf046b85bb"/>
+				<textElement>
+					<font fontName="SimHei" size="20"/>
+				</textElement>
+				<text><![CDATA[销量统计报表]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="224" y="17" width="56" height="30" uuid="09319eca-2a72-4adb-a76f-271205fcd5a4"/>
+				<textElement>
+					<font fontName="SimHei" size="16"/>
+				</textElement>
+				<text><![CDATA[时间：]]></text>
+			</staticText>
+			<textField pattern="yyyy-MM-dd">
+				<reportElement x="280" y="17" width="170" height="30" uuid="dcefe2b1-e706-4c18-939c-9d0fe069ae95"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="140" y="0" width="100" height="30" uuid="082a63d1-77b1-4f65-a2d7-6d1efb13593e"/>
+				<textElement>
+					<font fontName="SimHei" size="16"/>
+				</textElement>
+				<text><![CDATA[编号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="100" height="30" uuid="ddf44a85-1d84-4cf1-a888-17af2aafb31e"/>
+				<textElement>
+					<font fontName="SimHei" size="16"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="100" height="30" uuid="903f1d00-1a7c-4851-abf7-a1621442c252"/>
+				<textElement>
+					<font fontName="SimHei" size="16"/>
+				</textElement>
+				<text><![CDATA[销量]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="0" width="100" height="30" uuid="c85a6109-30be-466e-b3b5-c4e0b64611b0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c613b3c-4887-4c5d-9348-dc731f1a5473"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="240" y="0" width="100" height="30" uuid="eb523cd0-7558-4ea4-8d54-a6c0f065eb60">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a85546ad-7a46-4ef7-8279-402db68441fd"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SimHei" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="340" y="0" width="100" height="30" uuid="8d9dd045-b1c6-4b7f-b867-b3890d9f3e8f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="92d4aadb-68bc-4156-9558-e5346b2cf2e4"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

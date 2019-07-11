@@ -1,0 +1,48 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.zywork.dao.ProcessDAO">
+
+    <insert id="save">
+		<![CDATA[
+
+			insert into t_process(name, path, description, user_id)
+			values(#{name}, #{path}, #{description}, #{user_id})
+
+        ]]>
+	</insert>
+
+    <select id="getByName" parameterType="string" resultType="processDO">
+		<![CDATA[
+
+			select * from t_process where name = #{name}
+
+        ]]>
+	</select>
+
+    <select id="listPage" resultType="processDO">
+		<![CDATA[
+
+			select * from t_process limit #{beginIndex}, #{pageSize}
+
+        ]]>
+	</select>
+
+    <select id="count" resultType="long">
+		<![CDATA[
+
+			select count(id) from t_process
+
+        ]]>
+	</select>
+
+    <update id="updateDeploy">
+		<![CDATA[
+
+			update t_process set is_deploy = #{isDeploy}, deploy_time = #{deployTime} where id = #{processId}
+
+        ]]>
+	</update>
+
+</mapper>

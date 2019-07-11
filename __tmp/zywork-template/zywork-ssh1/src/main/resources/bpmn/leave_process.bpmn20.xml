@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="leave_process" name="leave_process" isExecutable="true">
+    <startEvent id="start" name="开始" activiti:initiator="applyUserId"></startEvent>
+    <userTask id="emp_submit" name="员工提交请假申请" activiti:assignee="${applyUserId}"></userTask>
+    <userTask id="mgr_check" name="经理审核" activiti:candidateGroups="manager"></userTask>
+    <sequenceFlow id="sid-27943D3C-4785-4E9A-B9D3-23D237303C68" sourceRef="emp_submit" targetRef="mgr_check"></sequenceFlow>
+    <endEvent id="end" name="结束"></endEvent>
+    <sequenceFlow id="sid-A9D576AA-0BB2-4350-BC5E-5CB71E0A9266" sourceRef="mgr_check" targetRef="end"></sequenceFlow>
+    <sequenceFlow id="sid-A41B509F-9B99-4970-9999-FC31BFA71BB8" sourceRef="start" targetRef="emp_submit"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_leave_process">
+    <bpmndi:BPMNPlane bpmnElement="leave_process" id="BPMNPlane_leave_process">
+      <bpmndi:BPMNShape bpmnElement="start" id="BPMNShape_start">
+        <omgdc:Bounds height="30.0" width="30.0" x="90.0" y="115.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="emp_submit" id="BPMNShape_emp_submit">
+        <omgdc:Bounds height="80.0" width="100.0" x="225.0" y="90.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="mgr_check" id="BPMNShape_mgr_check">
+        <omgdc:Bounds height="80.0" width="100.0" x="420.0" y="90.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="end" id="BPMNShape_end">
+        <omgdc:Bounds height="28.0" width="28.0" x="600.0" y="116.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-27943D3C-4785-4E9A-B9D3-23D237303C68" id="BPMNEdge_sid-27943D3C-4785-4E9A-B9D3-23D237303C68">
+        <omgdi:waypoint x="325.0" y="130.0"></omgdi:waypoint>
+        <omgdi:waypoint x="420.0" y="130.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-A9D576AA-0BB2-4350-BC5E-5CB71E0A9266" id="BPMNEdge_sid-A9D576AA-0BB2-4350-BC5E-5CB71E0A9266">
+        <omgdi:waypoint x="520.0" y="130.0"></omgdi:waypoint>
+        <omgdi:waypoint x="600.0" y="130.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-A41B509F-9B99-4970-9999-FC31BFA71BB8" id="BPMNEdge_sid-A41B509F-9B99-4970-9999-FC31BFA71BB8">
+        <omgdi:waypoint x="120.0" y="130.0"></omgdi:waypoint>
+        <omgdi:waypoint x="225.0" y="130.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
