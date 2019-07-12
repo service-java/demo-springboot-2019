@@ -57,35 +57,35 @@ public class BaseResp<T> {
     }
 
     public BaseResp(){
-        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
+//        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
     }
 
     public BaseResp(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
-        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
+//        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
     }
 
     public BaseResp(int code, ResultStatus resultStatus,String message) {
         this.code = code;
         this.message = message;
         this.data = data;
-        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
+//        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
     }
 
     public BaseResp(ResultStatus resultStatus) {
         this.code = resultStatus.getErrorCode();
         this.message = resultStatus.getErrorMsg();
         this.data = data;
-        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
+//        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
     }
 
     public BaseResp(ResultStatus resultStatus, T data) {
         this.code = resultStatus.getErrorCode();
         this.message = resultStatus.getErrorMsg();
         this.data = data;
-        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
+//        this.currentTime = DateUtils.format(new Date(),DateUtils.defaultDateTimeFormat);
     }
 
 
