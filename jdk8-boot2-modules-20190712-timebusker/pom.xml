@@ -64,30 +64,31 @@
         </plugins>
     </build>
     <modules>
-        <module>spring-boot-1-QuickStart</module>
-        <module>spring-boot-2-RESTful</module>
+        <module>ch1-basics/spring-boot-1-QuickStart</module>
+        <module>ch1-basics/spring-boot-2-RESTful</module>
+        <module>ch5-devops/spring-boot-12-Swagger2</module>
+        <module>ch2-orm-crud/spring-boot-13-MyBatis</module>
+        <module>ch2-orm-crud/spring-boot-14-JdbcTemplate</module>
+        <module>ch2-cache-db/spring-boot-15-Redis</module>
+        <module>ch2-cache-db/spring-boot-7-EhCache</module>
+        <module>ch2-orm-crud/spring-boot-10-SpringData</module>
+        <module>ch3-web-template/spring-boot-20-Freemarker</module>
+        <module>ch2-orm-crud/spring-boot-21-MultiDataSource</module>
+        <module>ch2-cache-db/spring-boot-23-MongoDB</module>
+        <module>ch2-orm-crud/spring-boot-13-MyBatis-XML</module>
+
+        <module>spring-boot-22-FarstPlus</module>
         <module>spring-boot-3-logs</module>
         <module>spring-boot-4-Scheduled</module>
         <module>spring-boot-5-Async</module>
         <module>spring-boot-6-GlobalException</module>
-        <module>spring-boot-7-EhCache</module>
         <module>spring-boot-8-AOP</module>
         <module>spring-boot-9-JavaMailSender</module>
-        <module>spring-boot-10-SpringData</module>
         <module>spring-boot-11-SpringSecurity</module>
-        <module>spring-boot-12-Swagger2</module>
-        <module>spring-boot-13-MyBatis</module>
-        <module>spring-boot-14-JdbcTemplate</module>
-        <module>spring-boot-15-Redis</module>
         <module>spring-boot-16-Transcation</module>
         <module>spring-boot-17-monitor</module>
         <module>spring-boot-18-MQ</module>
         <module>spring-boot-19-Definition-Starter</module>
-        <module>spring-boot-20-Freemarker</module>
-        <module>spring-boot-21-MultiDataSource</module>
-        <module>spring-boot-22-FarstPlus</module>
-        <module>spring-boot-23-MongoDB</module>
-        <module>spring-boot-13-MyBatis-XML</module>
         <module>spring-boot-24-WebSocket</module>
     </modules>
 

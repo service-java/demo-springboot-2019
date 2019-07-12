@@ -2,4 +2,4 @@
 target/
 .classpath
 .project
-*.iml
+spring-boot-7-EhCache.iml
