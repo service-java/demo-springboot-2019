@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.quick</groupId>
+    <artifactId>spring-boot-quick</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>quick-swagger</module>
+        <module>quick-modules</module>
+        <module>quick-package-assembly</module>
+        <module>quick-tika</module>
+        <module>quick-img2txt</module>
+        <module>quick-batch</module>
+        <module>quick-rabbitmq</module>
+        <module>quick-multi-data</module>
+        <module>quick-package-assembly-multi-env</module>
+        <module>quick-exception</module>
+        <module>quick-log</module>
+        <module>quick-oss</module>
+        <module>quick-jsp</module>
+        <module>quick-mybatis-druid</module>
+        <module>quick-jdbc</module>
+        <module>quick-okhttp</module>
+        <module>quick-redies</module>
+        <module>quick-oauth2</module>
+        <module>quick-jpa</module>
+        <module>quick-rocketmq</module>
+        <module>quick-logback</module>
+        <module>quick-activemq</module>
+        <module>quick-docker</module>
+        <module>quick-vue</module>
+        <module>quick-dynamic-bean</module>
+        <module>quick-activemq2</module>
+        <module>quick-dubbo</module>
+        <module>quick-async</module>
+        <module>quick-vw-crawler</module>
+        <module>quick-cache</module>
+        <module>quick-feign</module>
+        <module>quick-config-encrypt</module>
+        <module>quick-jwt</module>
+        <module>quick-wx-public</module>
+        <module>quick-lombok</module>
+        <module>quick-monitor-thread</module>
+        <module>quick-rest-template</module>
+        <module>quick-multi-rabbitmq</module>
+    </modules>
+    <packaging>pom</packaging>
+    <description>使用springboot框架做的一些例子，做个记录，以后方便即拿即用</description>
+
+    <properties>
+        <fastjson.version>1.2.31</fastjson.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
