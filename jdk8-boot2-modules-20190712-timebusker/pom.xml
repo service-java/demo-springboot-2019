@@ -77,11 +77,11 @@
         <module>ch2-cache-db/spring-boot-23-MongoDB</module>
         <module>ch2-orm-crud/spring-boot-13-MyBatis-XML</module>
 
-        <module>spring-boot-22-FarstPlus</module>
+        <module>ch3-web-template/spring-boot-22-FarstPlus</module>
         <module>spring-boot-3-logs</module>
         <module>spring-boot-4-Scheduled</module>
         <module>spring-boot-5-Async</module>
-        <module>spring-boot-6-GlobalException</module>
+        <module>ch1-basics/spring-boot-6-GlobalException</module>
         <module>spring-boot-8-AOP</module>
         <module>spring-boot-9-JavaMailSender</module>
         <module>spring-boot-11-SpringSecurity</module>

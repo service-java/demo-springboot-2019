@@ -15,6 +15,7 @@ public class AppRunner implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(AppRunner.class);
 
+
     private final GitHubLookupService gitHubLookupService;
 
     public AppRunner(GitHubLookupService gitHubLookupService) {
