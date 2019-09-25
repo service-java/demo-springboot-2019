@@ -4,17 +4,18 @@ server:
     context-path: /demo
 qiniu:
   ## 此处填写你自己的七牛云 access key
-  accessKey:
+  accessKey: xxx
   ## 此处填写你自己的七牛云 secret key
-  secretKey:
+  secretKey: yyy
   ## 此处填写你自己的七牛云 bucket
-  bucket:
+  bucket: hangzhou
   ## 此处填写你自己的七牛云 域名
-  prefix:
+  prefix: hi
 spring:
   servlet:
     multipart:
       enabled: true
-      location: /Users/yangkai.shen/Documents/code/back-end/spring-boot-demo/spring-boot-demo-upload/tmp
+      # 本地上传路径
+      location: D:/upload
       file-size-threshold: 5MB
       max-file-size: 20MB

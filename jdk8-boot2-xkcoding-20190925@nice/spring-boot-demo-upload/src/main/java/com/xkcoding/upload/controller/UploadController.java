@@ -57,8 +57,11 @@ public class UploadController {
 			return Dict.create().set("code", 400).set("message", "文件内容为空");
 		}
 		String fileName = file.getOriginalFilename();
+		// 文件名 (最后一个".")
 		String rawFileName = StrUtil.subBefore(fileName, ".", true);
+		// 文件后缀格式
 		String fileType = StrUtil.subAfter(fileName, ".", true);
+		// 加上时间戳
 		String localFilePath = StrUtil.appendIfMissing(fileTempPath, "/") + rawFileName + "-" + DateUtil.current(false) + "." + fileType;
 		try {
 			file.transferTo(new File(localFilePath));
@@ -81,7 +84,8 @@ public class UploadController {
 		String fileType = StrUtil.subAfter(fileName, ".", true);
 		String localFilePath = StrUtil.appendIfMissing(fileTempPath, "/") + rawFileName + "-" + DateUtil.current(false) + "." + fileType;
 		try {
-			file.transferTo(new File(localFilePath));
+			// 先存到本地??
+		    file.transferTo(new File(localFilePath));
 			Response response = qiNiuService.uploadFile(new File(localFilePath));
 			if (response.isOK()) {
 				JSONObject jsonObject = JSONUtil.parseObj(response.bodyString());

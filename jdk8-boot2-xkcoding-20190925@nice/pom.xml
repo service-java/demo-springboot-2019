@@ -34,20 +34,13 @@
     <module>spring-boot-demo-swagger</module>
     <module>spring-boot-demo-swagger-beauty</module>
     <module>spring-boot-demo-rbac-security</module>
-    <module>spring-boot-demo-rbac-shiro</module>
     <module>spring-boot-demo-session</module>
-    <module>spring-boot-demo-oauth</module>
     <module>spring-boot-demo-social</module>
     <module>spring-boot-demo-zookeeper</module>
     <module>spring-boot-demo-mq-rabbitmq</module>
-    <module>spring-boot-demo-mq-rocketmq</module>
     <module>spring-boot-demo-mq-kafka</module>
     <module>spring-boot-demo-websocket</module>
     <module>spring-boot-demo-websocket-socketio</module>
-    <module>spring-boot-demo-ureport2</module>
-    <module>spring-boot-demo-uflo</module>
-    <module>spring-boot-demo-urule</module>
-    <module>spring-boot-demo-activiti</module>
     <module>spring-boot-demo-async</module>
     <module>spring-boot-demo-dubbo</module>
     <module>spring-boot-demo-war</module>
@@ -58,7 +51,6 @@
     <module>spring-boot-demo-multi-datasource-jpa</module>
     <module>spring-boot-demo-multi-datasource-mybatis</module>
     <module>spring-boot-demo-sharding-jdbc</module>
-    <module>spring-boot-demo-tio</module>
     <module>spring-boot-demo-codegen</module>
     <module>spring-boot-demo-graylog</module>
     <module>spring-boot-demo-ldap</module>
