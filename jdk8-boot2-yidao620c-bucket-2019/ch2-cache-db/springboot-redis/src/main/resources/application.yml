@@ -7,7 +7,7 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC&useSSL=false&autoReconnect=true&tinyInt1isBit=false&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://127.0.0.1:3306/springboot_bucket?serverTimezone=UTC&useSSL=false&autoReconnect=true&tinyInt1isBit=false&useUnicode=true&characterEncoding=utf8
     username: root
     password: 123456
 
@@ -40,7 +40,7 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-    database: 0
+    database: 1
     lettuce:
       shutdown-timeout: 200ms
       pool:

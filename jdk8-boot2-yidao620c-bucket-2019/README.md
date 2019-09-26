@@ -1,5 +1,20 @@
 # README
 
+# 常见问题
+
+- mysql连接失败
+    - 版本降至 5.1.38
+
+---
+
+# aop
+
+```
+http://localhost:8092/first
+http://localhost:8092/second
+http://localhost:8092/doError
+```
+
 # async
 
 ```jsx

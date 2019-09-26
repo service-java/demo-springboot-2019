@@ -18,9 +18,11 @@ public class RoleFilter extends RolesAuthorizationFilter {
         Subject subject = getSubject(request, response);
         String[] rolesArray = (String[]) mappedValue;
 
+        // 有角色
         if (rolesArray == null || rolesArray.length == 0) {
             return true;
         }
+        // 角色符合权限
         for (int i = 0; i < rolesArray.length; i++) {
             if (subject.hasRole(rolesArray[i])) {
                 return true;

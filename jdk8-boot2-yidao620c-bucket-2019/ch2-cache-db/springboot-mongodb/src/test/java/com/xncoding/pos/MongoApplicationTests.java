@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.stereotype.Service;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
@@ -22,8 +21,8 @@ import static org.hamcrest.Matchers.*;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ApplicationTests {
-    private static final Logger log = LoggerFactory.getLogger(ApplicationTests.class);
+public class MongoApplicationTests {
+    private static final Logger log = LoggerFactory.getLogger(MongoApplicationTests.class);
 
     @Resource
     private CustomerService service;
@@ -43,6 +42,7 @@ public class ApplicationTests {
         // fetch all customers
         System.out.println("Customers found with findAll():");
         System.out.println("-------------------------------");
+
         int count = 0;
         for (Customer customer : service.findAll()) {
             System.out.println(customer);
