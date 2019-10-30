@@ -1,6 +1,6 @@
 package com.xncoding.jwt;
 
-import com.xncoding.jwt.common.util.JWTUtil;
+import com.xncoding.jwt.util.JWTUtil;
 import com.xncoding.jwt.shiro.ShiroKit;
 import org.junit.Test;
 

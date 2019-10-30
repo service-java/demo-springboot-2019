@@ -2,7 +2,7 @@ package com.xncoding.jwt.api;
 
 import com.xncoding.jwt.api.model.BaseResponse;
 import com.xncoding.jwt.api.model.LoginParam;
-import com.xncoding.jwt.common.util.JWTUtil;
+import com.xncoding.jwt.util.JWTUtil;
 import com.xncoding.jwt.model.ManagerInfo;
 import com.xncoding.jwt.service.ManagerInfoService;
 import com.xncoding.jwt.shiro.ShiroKit;

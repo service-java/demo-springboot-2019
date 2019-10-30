@@ -1,7 +1,7 @@
 package com.xncoding.jwt.shiro;
 
 import com.xncoding.jwt.dao.domain.Permission;
-import com.xncoding.jwt.common.util.JWTUtil;
+import com.xncoding.jwt.util.JWTUtil;
 import com.xncoding.jwt.model.ManagerInfo;
 import com.xncoding.jwt.model.SysRole;
 import com.xncoding.jwt.service.ManagerInfoService;

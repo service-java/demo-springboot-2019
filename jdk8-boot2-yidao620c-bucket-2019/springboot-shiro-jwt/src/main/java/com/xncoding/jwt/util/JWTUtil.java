@@ -1,4 +1,4 @@
-package com.xncoding.jwt.common.util;
+package com.xncoding.jwt.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
