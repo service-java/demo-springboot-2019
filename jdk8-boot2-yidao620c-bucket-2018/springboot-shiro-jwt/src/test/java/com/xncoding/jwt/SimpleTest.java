@@ -18,23 +18,25 @@ public class SimpleTest {
         // 用户名
         String username = "admin";
 
-        //随机数
+        // 随机数
         String salt = ShiroKit.getRandomSalt(16);
 
-        //原密码
+        // 原密码
         String password = "12345678";
-        String encodedPassword = ShiroKit.md5(password, username + salt);
-        System.out.println("随机数salt:" + salt);
         System.out.println("输入密码: " + password);
-        System.out.println("加密后的密码:" + encodedPassword);
+        System.out.println("随机数salt: " + salt);
+
+        // 需要存储这个salt??
+        String encodedPassword = ShiroKit.md5(password, username + salt);
+        System.out.println("加密后的密码: " + encodedPassword);
 
         // 生成token
         String token = JWTUtil.sign(username, encodedPassword);
-        System.out.println("token=" + token);
+        System.out.println("生成Token: " + token);
 
         // 验证token
         boolean isVerified = JWTUtil.verify(token, username, encodedPassword);
-        System.out.println(isVerified);
+        System.out.println("是否验证通过" + isVerified);
 
     }
 
