@@ -36,10 +36,12 @@ public class UserServiceTest {
         User user = new User(id, "admin", "admin");
         userService.createUser(user);
 
-//        User user1 = userService.getById(id); // 第1次访问
-//        assertEquals(user1.getPassword(), "admin");
+        User user1 = userService.getById(id); // 第1次访问
+        assertEquals(user1.getPassword(), "admin");
+
 //        User user2 = userService.getById(id); // 第2次访问
 //        assertEquals(user2.getPassword(), "admin");
+
 //        user.setPassword("123456");
 //        userService.updateUser(user);
 //        User user3 = userService.getById(id); // 第3次访问
@@ -47,4 +49,6 @@ public class UserServiceTest {
 //        userService.deleteById(id);
 //        assertNull(userService.getById(id));
     }
+
+
 }
