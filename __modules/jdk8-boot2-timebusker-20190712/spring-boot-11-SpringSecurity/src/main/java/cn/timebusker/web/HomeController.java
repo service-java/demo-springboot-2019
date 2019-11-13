@@ -33,8 +33,9 @@ public class HomeController {
     @PostMapping("/register")
     public String doRegister(UserEntity userEntity) {
         // 此处省略校验逻辑
-        if (userService.insert(userEntity))
+        if (userService.insert(userEntity)) {
             return "redirect:register?success";
+        }
         return "redirect:register?error";
     }
 

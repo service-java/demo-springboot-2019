@@ -28,6 +28,7 @@ public class PersonDbOpsTest {
      */
     @Test
     public void InsertDb() {
+        // 批量插入
         for (int i = 0; i < 50; i++) {
             PersonEntity person = new PersonEntity(i, "timebuser__" + i, i * 10);
             repository.save(person);
@@ -37,6 +38,7 @@ public class PersonDbOpsTest {
 
     @Test
     public void updateDb() {
+        // 更新前20
         for (int i = 0; i < 20; i++) {
             PersonEntity person = new PersonEntity(i, "AAAAAAAAAA__" + i, i * 10);
             repository.save(person);
@@ -46,7 +48,9 @@ public class PersonDbOpsTest {
 
     @Test
     public void deleteDB() {
+        // 删除id=1
         repository.delete(1);
+
         Map<String, Object> params = new HashMap<>();
         params.put("id", 1);
         PersonEntity person = (PersonEntity) repository.findOneByParams(params);

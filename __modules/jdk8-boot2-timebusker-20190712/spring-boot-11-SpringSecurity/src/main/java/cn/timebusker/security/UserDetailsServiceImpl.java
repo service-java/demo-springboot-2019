@@ -23,6 +23,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (userEntity == null) {
             throw new UsernameNotFoundException("用户不存在！");
         }
+
+        // 简易权限认证
         List<SimpleGrantedAuthority> simpleGrantedAuthorities = createAuthorities(userEntity.getRoles());
         return new User(userEntity.getUsername(), userEntity.getPassword(), simpleGrantedAuthorities);
     }

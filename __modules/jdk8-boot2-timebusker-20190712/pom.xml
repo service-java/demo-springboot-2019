@@ -24,6 +24,7 @@
 
     <!-- 全局依赖设置：引入依赖会自动传递到子模块中 -->
     <dependencies>
+
     </dependencies>
 
     <!-- 全局依赖管理：引入依赖不会自动传递到子模块中，子模块中需要申明依赖；重要用于依赖版本管理 -->
@@ -64,6 +65,7 @@
         </plugins>
     </build>
     <modules>
+        <module>ch1-basics/spring-boot-6-GlobalException</module>
         <module>ch1-basics/spring-boot-1-QuickStart</module>
         <module>ch1-basics/spring-boot-2-RESTful</module>
         <module>ch5-devops/spring-boot-12-Swagger2</module>
@@ -76,12 +78,11 @@
         <module>ch2-orm-crud/spring-boot-21-MultiDataSource</module>
         <module>ch2-cache-db/spring-boot-23-MongoDB</module>
         <module>ch2-orm-crud/spring-boot-13-MyBatis-XML</module>
-
+        <module>ch2-log/spring-boot-3-logs</module>
         <module>ch3-web-template/spring-boot-22-FarstPlus</module>
-        <module>spring-boot-3-logs</module>
+
         <module>spring-boot-4-Scheduled</module>
         <module>spring-boot-5-Async</module>
-        <module>ch1-basics/spring-boot-6-GlobalException</module>
         <module>spring-boot-8-AOP</module>
         <module>spring-boot-9-JavaMailSender</module>
         <module>spring-boot-11-SpringSecurity</module>

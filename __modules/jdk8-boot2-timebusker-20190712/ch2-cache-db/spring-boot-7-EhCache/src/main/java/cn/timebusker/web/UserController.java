@@ -17,7 +17,7 @@ import cn.timebusker.entity.User;
 import cn.timebusker.service.UserService;
 
 @RestController
-@RequestMapping("/u")
+@RequestMapping("/user")
 public class UserController {
 
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -27,7 +27,7 @@ public class UserController {
 
 	/**
 	 * 使用ID查询用户
-	 * 
+	 *
 	 * @param id
 	 * @return
 	 */
@@ -40,7 +40,7 @@ public class UserController {
 
 	/**
 	 * 查询所有用户
-	 * 
+	 *
 	 * @return
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -52,7 +52,7 @@ public class UserController {
 
 	/**
 	 * 更新或者新增用户信息
-	 * 
+	 *
 	 * @param user
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.POST)
@@ -64,7 +64,7 @@ public class UserController {
 
 	/**
 	 * 通过ID删除一个用户
-	 * 
+	 *
 	 * @param id
 	 */
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

@@ -9,10 +9,12 @@
 	<artifactId>spring-boot-7-EhCache</artifactId>
 	<name>spring-boot-7-EhCache</name>
 	<url>http://maven.apache.org</url>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	<dependencies>
+
+    <dependencies>
 		<!-- Spring Boot 核心三个模块 START -->
 		<!-- 核心模块，包括自动配置支持、日志和YAML -->
 		<dependency>

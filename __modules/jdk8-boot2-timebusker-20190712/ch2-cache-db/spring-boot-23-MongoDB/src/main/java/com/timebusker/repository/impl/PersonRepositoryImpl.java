@@ -60,6 +60,7 @@ public class PersonRepositoryImpl implements AbstractBasicRepository<PersonEntit
             query.addCriteria(Criteria.where(key).lt(params.get(key)));
         }
         Long allcount = mongoTemplate.count(query, PersonEntity.class);
+
         List<PersonEntity> list = mongoTemplate.find(query.with(pageable), PersonEntity.class);
         Page<PersonEntity> page = new PageImpl<PersonEntity>(list, pageable, allcount);
         return page.getContent();
