@@ -8,55 +8,55 @@
   <artifactId>spring-boot-demo</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <modules>
-    <module>spring-boot-demo-properties</module>
-    <module>spring-boot-demo-actuator</module>
-    <module>spring-boot-demo-admin</module>
-    <module>spring-boot-demo-logback</module>
-    <module>spring-boot-demo-log-aop</module>
-    <module>spring-boot-demo-exception-handler</module>
-    <module>spring-boot-demo-template-freemarker</module>
-    <module>spring-boot-demo-template-thymeleaf</module>
-    <module>spring-boot-demo-template-beetl</module>
-    <module>spring-boot-demo-template-enjoy</module>
-    <module>spring-boot-demo-orm-jdbctemplate</module>
-    <module>spring-boot-demo-orm-jpa</module>
-    <module>spring-boot-demo-orm-mybatis</module>
-    <module>spring-boot-demo-orm-mybatis-mapper-page</module>
-    <module>spring-boot-demo-orm-mybatis-plus</module>
-    <module>spring-boot-demo-orm-beetlsql</module>
-    <module>spring-boot-demo-upload</module>
-    <module>spring-boot-demo-cache-redis</module>
-    <module>spring-boot-demo-cache-ehcache</module>
-    <module>spring-boot-demo-email</module>
-    <module>spring-boot-demo-task</module>
-    <module>spring-boot-demo-task-quartz</module>
-    <module>spring-boot-demo-task-xxl-job</module>
-    <module>spring-boot-demo-swagger</module>
-    <module>spring-boot-demo-swagger-beauty</module>
-    <module>spring-boot-demo-rbac-security</module>
+    <module>ch1-basics/spring-boot-demo-properties</module>
+    <module>ch5-devops/spring-boot-demo-actuator</module>
+    <module>ch5-devops/spring-boot-demo-admin</module>
+    <module>ch2-tools/spring-boot-demo-log-aop</module>
+    <module>ch2-tools/spring-boot-demo-logback</module>
+    <module>ch1-basics/spring-boot-demo-exception-handler</module>
+    <module>ch3-web/spring-boot-demo-template-freemarker</module>
+    <module>ch3-web/spring-boot-demo-template-thymeleaf</module>
+    <module>ch3-web/spring-boot-demo-template-beetl</module>
+    <module>ch3-web/spring-boot-demo-template-enjoy</module>
+    <module>ch2-tools/spring-boot-demo-orm-jdbctemplate</module>
+    <module>ch2-tools/spring-boot-demo-orm-jpa</module>
+    <module>ch2-tools/spring-boot-demo-orm-mybatis</module>
+    <module>ch2-tools/spring-boot-demo-orm-mybatis-mapper-page</module>
+    <module>ch2-tools/spring-boot-demo-orm-mybatis-plus</module>
+    <module>ch2-tools/spring-boot-demo-orm-beetlsql</module>
+    <module>ch2-tools/spring-boot-demo-upload</module>
+    <module>ch2-tools/spring-boot-demo-cache-redis</module>
+    <module>ch2-tools/spring-boot-demo-cache-ehcache</module>
+    <module>ch2-tools/spring-boot-demo-email</module>
+    <module>ch4-soa/spring-boot-demo-task</module>
+    <module>ch4-soa/spring-boot-demo-task-quartz</module>
+    <module>ch4-soa/spring-boot-demo-task-xxl-job</module>
+    <module>ch5-devops/spring-boot-demo-swagger</module>
+    <module>ch5-devops/spring-boot-demo-swagger-beauty</module>
+    <module>ch2-tools/spring-boot-demo-rbac-security</module>
     <module>spring-boot-demo-session</module>
     <module>spring-boot-demo-social</module>
-    <module>spring-boot-demo-zookeeper</module>
-    <module>spring-boot-demo-mq-rabbitmq</module>
-    <module>spring-boot-demo-mq-kafka</module>
-    <module>spring-boot-demo-websocket</module>
-    <module>spring-boot-demo-websocket-socketio</module>
-    <module>spring-boot-demo-async</module>
-    <module>spring-boot-demo-dubbo</module>
-    <module>spring-boot-demo-war</module>
-    <module>spring-boot-demo-elasticsearch</module>
-    <module>spring-boot-demo-mongodb</module>
-    <module>spring-boot-demo-neo4j</module>
-    <module>spring-boot-demo-docker</module>
-    <module>spring-boot-demo-multi-datasource-jpa</module>
-    <module>spring-boot-demo-multi-datasource-mybatis</module>
+    <module>ch4-soa/spring-boot-demo-zookeeper</module>
+    <module>ch4-soa/spring-boot-demo-mq-rabbitmq</module>
+    <module>ch4-soa/spring-boot-demo-mq-kafka</module>
+    <module>ch3-web/spring-boot-demo-websocket</module>
+    <module>ch3-web/spring-boot-demo-websocket-socketio</module>
+    <module>ch1-basics/spring-boot-demo-async</module>
+    <module>ch4-soa/spring-boot-demo-dubbo</module>
+    <module>ch5-devops/spring-boot-demo-war</module>
+    <module>ch1-db/spring-boot-demo-elasticsearch</module>
+    <module>ch1-db/spring-boot-demo-mongodb</module>
+    <module>ch1-db/spring-boot-demo-neo4j</module>
+    <module>ch5-devops/spring-boot-demo-docker</module>
+    <module>ch2-tools/spring-boot-demo-multi-datasource-jpa</module>
+    <module>ch2-tools/spring-boot-demo-multi-datasource-mybatis</module>
     <module>spring-boot-demo-sharding-jdbc</module>
-    <module>spring-boot-demo-codegen</module>
+    <module>ch2-tools/spring-boot-demo-codegen</module>
     <module>spring-boot-demo-graylog</module>
     <module>spring-boot-demo-ldap</module>
-    <module>spring-boot-demo-dynamic-datasource</module>
-    <module>spring-boot-demo-ratelimit-guava</module>
-    <module>spring-boot-demo-elasticsearch-rest-high-level-client</module>
+    <module>ch1-db/spring-boot-demo-dynamic-datasource</module>
+    <module>ch2-tools/spring-boot-demo-ratelimit-guava</module>
+    <module>ch1-db/spring-boot-demo-elasticsearch-rest-high-level-client</module>
   </modules>
   <packaging>pom</packaging>
 
