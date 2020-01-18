@@ -37,6 +37,7 @@ public class RateLimiterAspect {
     public Object pointcut(ProceedingJoinPoint point) throws Throwable {
         MethodSignature signature = (MethodSignature) point.getSignature();
         Method method = signature.getMethod();
+
         // 通过 AnnotationUtils.findAnnotation 获取 RateLimiter 注解
         RateLimiter rateLimiter = AnnotationUtils.findAnnotation(method, RateLimiter.class);
         if (rateLimiter != null && rateLimiter.qps() > RateLimiter.NOT_LIMITED) {
@@ -47,6 +48,7 @@ public class RateLimiterAspect {
             }
 
             log.debug("【{}】的QPS设置为: {}", method.getName(), RATE_LIMITER_CACHE.get(method.getName()).getRate());
+
             // 尝试获取令牌
             if (RATE_LIMITER_CACHE.get(method.getName()) != null && !RATE_LIMITER_CACHE.get(method.getName()).tryAcquire(rateLimiter.timeout(), rateLimiter.timeUnit())) {
                 throw new RuntimeException("手速太快了，慢点儿吧~");

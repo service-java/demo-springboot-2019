@@ -10,7 +10,7 @@
   <modules>
     <module>ch1-basics/spring-boot-demo-properties</module>
     <module>ch5-devops/spring-boot-demo-actuator</module>
-    <module>ch5-devops/spring-boot-demo-admin</module>
+    <module>spring-boot-demo-admin</module>
     <module>ch2-tools/spring-boot-demo-log-aop</module>
     <module>ch2-tools/spring-boot-demo-logback</module>
     <module>ch1-basics/spring-boot-demo-exception-handler</module>
@@ -24,9 +24,9 @@
     <module>ch2-tools/spring-boot-demo-orm-mybatis-mapper-page</module>
     <module>ch2-tools/spring-boot-demo-orm-mybatis-plus</module>
     <module>ch2-tools/spring-boot-demo-orm-beetlsql</module>
-    <module>ch2-tools/spring-boot-demo-upload</module>
+    <module>spring-boot-demo-upload</module>
     <module>ch2-db/spring-boot-demo-cache-redis</module>
-    <module>ch2-db/spring-boot-demo-cache-ehcache</module>
+    <module>spring-boot-demo-cache-ehcache</module>
     <module>ch2-tools/spring-boot-demo-email</module>
     <module>ch4-soa/spring-boot-demo-task</module>
     <module>ch4-soa/spring-boot-demo-task-quartz</module>
@@ -42,7 +42,7 @@
     <module>ch3-web/spring-boot-demo-websocket</module>
     <module>ch3-web/spring-boot-demo-websocket-socketio</module>
     <module>ch1-basics/spring-boot-demo-async</module>
-    <module>ch4-soa/spring-boot-demo-dubbo</module>
+    <module>spring-boot-demo-dubbo</module>
     <module>ch5-devops/spring-boot-demo-war</module>
     <module>ch2-db/spring-boot-demo-elasticsearch</module>
     <module>ch2-db/spring-boot-demo-mongodb</module>
@@ -54,11 +54,11 @@
     <module>ch2-tools/spring-boot-demo-codegen</module>
     <module>spring-boot-demo-graylog</module>
     <module>ch5-devops/spring-boot-demo-ldap</module>
-    <module>ch2-db/spring-boot-demo-dynamic-datasource</module>
+    <module>spring-boot-demo-dynamic-datasource</module>
     <module>spring-boot-demo-ratelimit-guava</module>
     <module>ch2-db/spring-boot-demo-elasticsearch-rest-high-level-client</module>
     <module>spring-boot-demo-activiti</module>
-    <module>spring-boot-demo-mq-rocketmq</module>
+    <module>ch4-soa/spring-boot-demo-mq-rocketmq</module>
     <module>spring-boot-demo-ratelimit-redis</module>
     <module>spring-boot-demo-rbac-shiro</module>
   </modules>
