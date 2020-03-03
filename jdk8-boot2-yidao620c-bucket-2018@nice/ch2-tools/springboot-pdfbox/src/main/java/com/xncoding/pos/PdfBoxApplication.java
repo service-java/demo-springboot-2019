@@ -51,24 +51,30 @@ public class PdfBoxApplication {
      */
     public static void pdf2Img(String filePath) throws IOException {
         PDDocument pdf = null;
+
         try {
             pdf = PDDocument.load(new File(filePath));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         PDFRenderer pdfRenderer = new PDFRenderer(pdf);
         PDPageTree pageTree = pdf.getPages();
         int pageCounter = 0;
-        for(PDPage page : pageTree){
+
+        // 遍历每一页PDF
+        for(PDPage page : pageTree) {
             PDPageContentStream cs = new PDPageContentStream(pdf, page, PDPageContentStream.AppendMode.APPEND, true, true);
             String ts = "http://www.zjzj.net/index";
             PDFont font = PDType1Font.HELVETICA_OBLIQUE;
             float fontSize = 50.0f;
             PDResources resources = page.getResources();
             PDExtendedGraphicsState r0 = new PDExtendedGraphicsState();
+
             // 透明度
             r0.setNonStrokingAlphaConstant(0.2f);
             r0.setAlphaSourceFlag(true);
+
             cs.setGraphicsStateParameters(r0);
             cs.setNonStrokingColor(200,0,0);//Red
             cs.beginText();
@@ -86,13 +92,16 @@ public class PdfBoxApplication {
 //                scale = 720 / width;
 //            }
 
-            BufferedImage bim = null;
+
+            // 保存图片
             try {
+                BufferedImage bim = null;
                 bim = pdfRenderer.renderImage(pageCounter, scale, ImageType.RGB);
                 ImageIOUtil.writeImage(bim, "d:/upload/download/" + (pageCounter++) + ".png", 300);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         }
 
     }
