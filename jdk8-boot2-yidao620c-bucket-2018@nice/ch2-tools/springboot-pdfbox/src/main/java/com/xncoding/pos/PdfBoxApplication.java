@@ -11,6 +11,7 @@ import org.apache.pdfbox.util.Matrix;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -63,7 +64,7 @@ public class PdfBoxApplication {
         int pageCounter = 0;
 
         // 遍历每一页PDF
-        for(PDPage page : pageTree) {
+        for (PDPage page : pageTree) {
             PDPageContentStream cs = new PDPageContentStream(pdf, page, PDPageContentStream.AppendMode.APPEND, true, true);
             String ts = "http://www.zjzj.net/index";
             PDFont font = PDType1Font.HELVETICA_OBLIQUE;
@@ -87,7 +88,7 @@ public class PdfBoxApplication {
 
 
 //            float width = page.getCropBox().getWidth();
-            float scale = 2.0f;
+            float scale = 1.5f;
 //            if(width > 720){
 //                scale = 720 / width;
 //            }
@@ -96,8 +97,14 @@ public class PdfBoxApplication {
             // 保存图片
             try {
                 BufferedImage bim = null;
-                bim = pdfRenderer.renderImage(pageCounter, scale, ImageType.RGB);
-                ImageIOUtil.writeImage(bim, "d:/upload/download/" + (pageCounter++) + ".png", 300);
+//                bim = pdfRenderer.renderImage(pageCounter, scale, ImageType.RGB);
+                // ImageIOUtil.writeImage(bim, "d:/upload/download/" + (pageCounter++) + ".png", 300);
+
+                // 换成如下DPI写法, 图片输出会快一些!!!
+                bim = pdfRenderer.renderImageWithDPI(pageCounter, 100, ImageType.RGB);
+                ImageIO.write(bim, "PNG", new File("d:/upload/download/" + pageCounter + ".png"));
+                pageCounter++;
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
