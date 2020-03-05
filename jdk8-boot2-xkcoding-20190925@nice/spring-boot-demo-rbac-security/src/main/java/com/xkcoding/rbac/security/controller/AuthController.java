@@ -13,10 +13,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -49,7 +46,9 @@ public class AuthController {
      * 登录
      */
     @PostMapping("/login")
-    public ApiResponse login(@Valid @RequestBody LoginRequest loginRequest) {
+    // @ResponseBody
+    // @fix 2020-03-05 加@RequestParam会读不到参数, 去掉就正常咯 --> @RequestBody
+    public ApiResponse login(@Valid LoginRequest loginRequest) {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsernameOrEmailOrPhone(), loginRequest.getPassword()));
 
         SecurityContextHolder.getContext()
@@ -60,6 +59,7 @@ public class AuthController {
     }
 
     @PostMapping("/logout")
+    @ResponseBody
     public ApiResponse logout(HttpServletRequest request) {
         try {
             // 设置JWT过期

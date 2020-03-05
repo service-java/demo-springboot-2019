@@ -82,6 +82,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .access("@rbacAuthorityService.hasPermission(request,authentication)")
 
+                // 权限认证接口 @ignore --> yml已配置
+//                .and()
+//                .authorizeRequests()
+//                .antMatchers("/api/auth/**").permitAll()
+
                 // 登出行为由自己实现，参考 AuthController#logout
                 .and().logout().disable()
                 // Session 管理
