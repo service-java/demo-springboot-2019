@@ -44,6 +44,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String usernameOrEmailOrPhone) throws UsernameNotFoundException {
         User user = userDao.findByUsernameOrEmailOrPhone(usernameOrEmailOrPhone, usernameOrEmailOrPhone, usernameOrEmailOrPhone)
                 .orElseThrow(() -> new UsernameNotFoundException("未找到用户信息 : " + usernameOrEmailOrPhone));
+
         List<Role> roles = roleDao.selectByUserId(user.getId());
         List<Long> roleIds = roles.stream()
                 .map(Role::getId)

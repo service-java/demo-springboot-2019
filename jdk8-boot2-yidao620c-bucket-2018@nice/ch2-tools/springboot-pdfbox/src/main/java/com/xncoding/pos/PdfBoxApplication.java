@@ -101,8 +101,8 @@ public class PdfBoxApplication {
                 // ImageIOUtil.writeImage(bim, "d:/upload/download/" + (pageCounter++) + ".png", 300);
 
                 // 换成如下DPI写法, 图片输出会快一些!!!
-                bim = pdfRenderer.renderImageWithDPI(pageCounter, 100, ImageType.RGB);
-                ImageIO.write(bim, "PNG", new File("d:/upload/download/" + pageCounter + ".png"));
+                bim = pdfRenderer.renderImageWithDPI(pageCounter, 90, ImageType.RGB);
+                ImageIO.write(bim, "JPG", new File("d:/upload/download/" + pageCounter + ".jpg"));
                 pageCounter++;
 
             } catch (IOException e) {

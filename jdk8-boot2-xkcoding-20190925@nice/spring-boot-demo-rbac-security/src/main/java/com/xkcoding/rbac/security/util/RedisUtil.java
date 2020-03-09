@@ -46,12 +46,15 @@ public class RedisUtil {
         ScanOptions options = ScanOptions.scanOptions()
                 .match(patternKey)
                 .build();
+
+
         RedisConnectionFactory factory = stringRedisTemplate.getConnectionFactory();
         RedisConnection rc = factory.getConnection();
         Cursor<byte[]> cursor = rc.scan(options);
 
         List<String> result = Lists.newArrayList();
 
+        // 游标
         long tmpIndex = 0;
         int startIndex = (currentPage - 1) * pageSize;
         int end = currentPage * pageSize;
@@ -63,6 +66,7 @@ public class RedisUtil {
             tmpIndex++;
         }
 
+        // 关闭
         try {
             cursor.close();
             RedisConnectionUtils.releaseConnection(rc, factory);
