@@ -123,3 +123,4 @@ __tmp
 # uploads
 outjava-tools.iml
 !/__jars/*.jar
+!_jar/*jar
