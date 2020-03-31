@@ -1,0 +1,18 @@
+package com.xncoding.pos.entity;
+
+import lombok.Data;
+
+/**
+ * Description: 模块功能描述
+ * <p>
+ * User: luo0412
+ * Date: 2020-03-31 16:45
+ */
+@Data
+public class Student {
+    private String firstName;
+    private String lastName;
+    private int rollNo;
+    private String className;
+    private Address address;
+}

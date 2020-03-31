@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Student>
+    <firstName>Mahesh</firstName>
+    <lastName>Parashar</lastName>
+    <rollNo>1</rollNo>
+    <className>1st</className>
+    <address>
+        <area>H.No. 16/3, Preet Vihar.</area>
+        <city>Delhi</city>
+        <state>Delhi</state>
+        <country>India</country>
+        <pincode>110012</pincode>
+    </address>
+</Student>
