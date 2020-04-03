@@ -10,9 +10,14 @@ import lombok.Data;
  */
 @Data
 public class Student {
+    private StudentName name;
     private String firstName;
     private String lastName;
     private int rollNo;
     private String className;
     private Address address;
+
+    public Student(String firstName, String lastName) {
+        this.name = new StudentName(firstName, lastName);
+    }
 }
