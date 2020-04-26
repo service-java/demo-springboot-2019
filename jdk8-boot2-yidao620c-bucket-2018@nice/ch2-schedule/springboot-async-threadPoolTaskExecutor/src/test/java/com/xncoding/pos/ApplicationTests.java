@@ -1,6 +1,6 @@
 package com.xncoding.pos;
 
-import com.xncoding.pos.async.AsyncTask;
+import com.xncoding.pos.task.AsyncDemo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -9,11 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.Console;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
 
 /**
  * 测试异步任务
@@ -22,18 +20,17 @@ import static org.hamcrest.Matchers.*;
 @SpringBootTest
 public class ApplicationTests {
     private static final Logger log = LoggerFactory.getLogger(ApplicationTests.class);
+
     @Autowired
-    private AsyncTask asyncTask;
+    private AsyncDemo asyncDemo;
 
     @Test
-    public void testAsync() throws InterruptedException, ExecutionException {
-        asyncTask.dealNoReturnTask();
+    public void contextLoads() throws InterruptedException, ExecutionException {
+        asyncDemo.asyncInvokeSimplest(); // asyncSimplest
+        asyncDemo.asyncInvokeWithParameter("test"); // asyncInvokeWithParameter, parementer=test
+        Future<String> future = asyncDemo.asyncInvokeReturnFuture(100); // asyncInvokeWithParameter, parementer=test
+        System.out.println(future.get()); // success:100
+        System.out.println("==============");
 
-        Future<String> f = asyncTask.dealHaveReturnTask(5);
-
-        log.info("主线程执行finished");
-
-        log.info(f.get());
-        assertThat(f.get(), is("success:" + 5));
     }
 }

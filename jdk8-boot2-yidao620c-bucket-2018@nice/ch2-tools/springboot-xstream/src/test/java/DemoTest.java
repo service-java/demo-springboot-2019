@@ -109,8 +109,8 @@ public class DemoTest {
                     "</User>";
             //转对象
             User user = (User)xStream.fromXML(xml);
-            System.out.println(user.toString());
-            System.out.println(user.getUserName());
+            System.out.println(user.toString()); // User:{userName=lanweihong,email=lwhhhp@gmail.com}
+            System.out.println(user.getUserName()); // lanweihong
     }
 
 
