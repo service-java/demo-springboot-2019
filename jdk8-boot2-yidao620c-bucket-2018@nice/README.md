@@ -2,6 +2,20 @@
 
 - 在 SpringBootBucket 的基础上修改
     - https://github.com/yidao620c/SpringBootBucket
+
+- springboot-demo是基础模板
+
+```js
+// 使用依赖
+jetty
+thymeleaf
+junit
+apache common
+hutool + guava
+mysql + mybatis-plus
+lombok     
+```
+
     
 # 常见问题 @faq
 

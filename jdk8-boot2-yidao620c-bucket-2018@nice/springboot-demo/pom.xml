@@ -28,6 +28,8 @@
     </properties>
 
     <dependencies>
+
+        <!--  服务器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -52,6 +54,7 @@
             <!--<scope>test</scope>-->
         </dependency>
 
+        <!--  thymeleaf  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -91,7 +94,7 @@
             <version>28.2-jre</version>
         </dependency>
 
-        <!-- hutool架包 -->
+        <!-- hutool -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
@@ -106,6 +109,14 @@
             <!--<scope>provided</scope>-->
         </dependency>
 
+
+        <!--  MySQL驱动 + ORM -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
@@ -116,15 +127,6 @@
             <artifactId>mybatisplus-spring-boot-starter</artifactId>
             <version>${mybatisplus-spring-boot-starter.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-
-
 
     </dependencies>
 
@@ -179,8 +181,13 @@
             <releases>
                 <enabled>true</enabled>
             </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
     </repositories>
+
+
     <pluginRepositories>
         <pluginRepository>
             <id>public</id>
