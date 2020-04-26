@@ -1,15 +1,18 @@
 # README
 
-- 
-
-# 常见问题
+- 在 SpringBootBucket 的基础上修改
+    - https://github.com/yidao620c/SpringBootBucket
+    
+# 常见问题 @faq
 
 - mysql连接失败
     - 版本降至 5.1.38
 
 ---
 
-# aop
+# 模块访问网址
+
+- aop
 
 ```
 http://localhost:8092/first
@@ -17,7 +20,7 @@ http://localhost:8092/second
 http://localhost:8092/doError
 ```
 
-# async
+- async
 
 ```jsx
 运行测试 testAsync
@@ -30,7 +33,7 @@ asyncInvokeReturnFuture, parementer=5
 success:5
 ```
 
-# cxf
+- cxf
 
-# RabbitMQ - RPC
+- RabbitMQ
 
