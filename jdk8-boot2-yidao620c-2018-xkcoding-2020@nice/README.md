@@ -56,6 +56,8 @@ success:5
 # 备注
 
 ```xml
+<version>1.0.0-SNAPSHOT</version>
+
 <groupId>com.xkcoding</groupId>
 <parent>
     <groupId>org.springframework.boot</groupId>

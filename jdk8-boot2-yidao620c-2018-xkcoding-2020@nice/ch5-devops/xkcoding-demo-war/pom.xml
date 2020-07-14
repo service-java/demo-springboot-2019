@@ -3,24 +3,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-demo-swagger-beauty</artifactId>
+    <artifactId>spring-boot-demo-war</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <!-- 若需要打成 war 包，则需要将打包方式改成 war -->
+    <packaging>war</packaging>
 
-    <name>spring-boot-demo-swagger-beauty</name>
+    <name>spring-boot-demo-war</name>
     <description>Demo project for Spring Boot</description>
 
+    <groupId>com.xkcoding</groupId>
     <parent>
-        <groupId>com.xkcoding</groupId>
-        <artifactId>spring-boot-demo</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.4.RELEASE</version>
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <battcn.swagger.version>2.1.2-RELEASE</battcn.swagger.version>
     </properties>
 
     <dependencies>
@@ -29,31 +30,34 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- 若需要打成 war 包，则需要将 tomcat 引入，scope 设置为 provided -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>com.battcn</groupId>
-            <artifactId>swagger-spring-boot-starter</artifactId>
-            <version>${battcn.swagger.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
     </dependencies>
 
     <build>
-        <finalName>spring-boot-demo-swagger-beauty</finalName>
+        <finalName>spring-boot-demo-war</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
             </plugin>
         </plugins>
     </build>
