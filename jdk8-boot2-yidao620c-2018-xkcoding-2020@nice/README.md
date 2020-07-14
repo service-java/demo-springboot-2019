@@ -1,5 +1,7 @@
 # README
 
+- 有父级pom起来方便, 但是作为demo搬运起来不方便...所以在原仓库基础上都改了些...
+
 - 在 SpringBootBucket 的基础上修改
     - https://github.com/yidao620c/SpringBootBucket
 
@@ -50,6 +52,30 @@ success:5
 - cxf
 
 - RabbitMQ
+
+# 备注
+
+```xml
+<groupId>com.xkcoding</groupId>
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.4.RELEASE</version>
+</parent>
+
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <spring.boot.version>2.1.0.RELEASE</spring.boot.version>
+    <mysql.version>8.0.12</mysql.version>
+    <hutool.version>4.6.6</hutool.version>
+    <guava.version>28.1-jre</guava.version>
+    <user.agent.version>1.20</user.agent.version>
+</properties>
+```
 
 ---
 
