@@ -23,7 +23,7 @@ server.port=18080
 
 spring.datasource.url=jdbc:mysql://127.0.0.1:3306/xxl_job?Unicode=true&characterEncoding=UTF-8&useSSL=false
 spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.password=123456
 ```
 
 ### 1.3. 修改日志配置文件 logback.xml
