@@ -14,6 +14,9 @@
 
 4. 启动容器：`docker start zk`
 
+- @demo 
+    - http://localhost:8080/demo/sayHello
+
 ## 运行步骤
 
 1. 进入服务提供方 `spring-boot-demo-dubbo-provider` 目录，运行 `SpringBootDemoDubboProviderApplication.java`
