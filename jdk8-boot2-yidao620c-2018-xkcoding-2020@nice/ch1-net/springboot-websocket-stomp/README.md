@@ -4,7 +4,7 @@
 在SpringBoot中有两种实现WebSocket实时通信的方式：
 
 1. 一个是使用WebSocket的一个子协议stomp
-2. 另外一个是使用Socket.IO协议实现。
+2. 另外一个是使用Socket.IO协议实现
 
 本项目演示如何通过stomp协议实现
 

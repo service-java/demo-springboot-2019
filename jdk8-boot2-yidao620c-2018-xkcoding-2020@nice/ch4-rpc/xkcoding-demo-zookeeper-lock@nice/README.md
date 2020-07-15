@@ -57,6 +57,7 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
+                    
         </dependency>
 
         <dependency>

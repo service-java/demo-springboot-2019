@@ -23,7 +23,6 @@ public class HttpMimeController {
     private static final Logger _logger = LoggerFactory.getLogger(HttpMimeController.class);
 
 
-
     @GetMapping("/httpclient")
     @ResponseBody
     public String http() throws IOException {
