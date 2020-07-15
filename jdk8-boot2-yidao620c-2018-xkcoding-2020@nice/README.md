@@ -1,16 +1,23 @@
 # README
 
-- 有父级pom起来方便, 但是作为demo搬运起来不方便...所以在原仓库基础上都改了些...
-
-- 在 SpringBootBucket 的基础上修改
+- 项目代码改造来源
+    - https://github.com/wuyouzhuguli/SpringAll
+    - https://github.com/xkcoding/spring-boot-demo
+    - https://github.com/vector4wang/spring-boot-quick
     - https://github.com/yidao620c/SpringBootBucket
 
-- springboot-demo是基础模板
+- 有父级pom维护起来方便, 但为了demo的cv搬运方便直接去掉了
+
+- 基础模板
+    - springboot-demo --> 基础
+    - quick-modules-demo --> 多模块
+    - xkcoding-dubbo-demo --> 远程通信
+    
+- 公共依赖
 
 ```js
-// 使用依赖
-jetty
-thymeleaf
+// jetty
+// thymeleaf
 junit
 apache common
 hutool + guava
@@ -26,34 +33,7 @@ lombok
 
 ---
 
-# 模块访问网址
-
-- aop
-
-```
-http://localhost:8092/first
-http://localhost:8092/second
-http://localhost:8092/doError
-```
-
-- async
-
-```jsx
-运行测试 testAsync
-
-// 输出
-主线程执行finished
-asyncInvokeReturnFuture, parementer=5
-返回值为void的异步调用开始AsyncThread-1
-返回值为void的异步调用结束AsyncThread-1
-success:5
-```
-
-- cxf
-
-- RabbitMQ
-
-# 备注
+# 备注 @ignore
 
 ```xml
 <version>1.0.0-SNAPSHOT</version>
