@@ -11,7 +11,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <dependencies>
@@ -30,7 +30,7 @@
         </dependency>
         <dependency>
             <groupId>com.quick</groupId>
-            <artifactId>quick-modules-dao</artifactId>
+            <artifactId>quick-modules-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

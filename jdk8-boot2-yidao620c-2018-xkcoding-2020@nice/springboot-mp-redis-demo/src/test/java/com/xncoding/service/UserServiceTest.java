@@ -1,7 +1,7 @@
 package com.xncoding.service;
 
 import com.xncoding.trans.RedisCacheApplication;
-import com.xncoding.trans.dao.entity.User;
+import com.xncoding.trans.entity.UserEntity;
 import com.xncoding.trans.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,23 +34,23 @@ public class UserServiceTest {
     public void testCache() {
         // 创建一个用户admin
         int id = new Random().nextInt(1000);
-        User user = new User(id, "admin", "admin");
+        UserEntity user = new UserEntity(id, "admin", "admin");
         userService.createUser(user);
 
         // 再创建一个用户xiong
         int id2 = new Random().nextInt(1000);
-        User user2 = new User(id2, "xiong", "neng");
+        UserEntity user2 = new UserEntity(id2, "xiong", "neng");
         userService.createUser(user2);
 
         // 查询所有用户列表
-        List<User> list = userService.getAllUsers();
+        List<UserEntity> list = userService.getAllUsers();
         System.out.println(list.size());
         // assertEquals(list.size(), 2);
 
         // 两次访问看看缓存命中情况
-        User user3 = userService.getById(id); // 第1次访问
+        UserEntity user3 = userService.getById(id); // 第1次访问
         assertEquals(user3.getPassword(), "admin");
-        User user4 = userService.getById(id); // 第2次访问
+        UserEntity user4 = userService.getById(id); // 第2次访问
         assertEquals(user4.getPassword(), "admin");
 
         // 更新用户密码
@@ -58,7 +58,7 @@ public class UserServiceTest {
         userService.updateUser(user4);
 
         // 更新完成后再次访问用户
-        User user5 = userService.getById(id); // 第4次访问
+        UserEntity user5 = userService.getById(id); // 第4次访问
         assertEquals(user5.getPassword(), "123456");
 
         // 删除用户admin

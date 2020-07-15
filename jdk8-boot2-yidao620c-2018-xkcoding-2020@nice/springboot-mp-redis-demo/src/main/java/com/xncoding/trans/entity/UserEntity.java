@@ -1,4 +1,4 @@
-package com.xncoding.trans.dao.entity;
+package com.xncoding.trans.entity;
 
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.enums.IdType;
 import java.io.Serializable;
 
 @TableName(value = "t_user")
-public class User extends Model<User> {
+public class UserEntity extends Model<UserEntity> {
     /**
      * 主键ID
      */
@@ -19,10 +19,10 @@ public class User extends Model<User> {
 
     private String password;
 
-    public User() {
+    public UserEntity() {
     }
 
-    public User(Integer id, String username, String password) {
+    public UserEntity(Integer id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;

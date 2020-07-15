@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <modules>
-        <module>dao</module>
+        <module>common</module>
         <module>service1</module>
         <module>service2</module>
         <module>test</module>
@@ -43,7 +43,7 @@
             <!-- 子模块的依赖管理 -->
             <dependency>
                 <groupId>com.quick</groupId>
-                <artifactId>quick-modules-dao</artifactId>
+                <artifactId>quick-modules-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

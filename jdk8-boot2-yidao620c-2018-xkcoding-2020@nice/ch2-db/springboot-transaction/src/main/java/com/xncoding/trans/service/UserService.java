@@ -1,7 +1,7 @@
 package com.xncoding.trans.service;
 
-import com.xncoding.trans.dao.entity.User;
-import com.xncoding.trans.dao.repository.UserMapper;
+import com.xncoding.trans.mapper.entity.User;
+import com.xncoding.trans.mapper.repository.UserMapper;
 import com.xncoding.trans.exception.MyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

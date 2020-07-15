@@ -1,8 +1,7 @@
 package com.xncoding.trans.service;
 
-import com.baomidou.mybatisplus.mapper.Condition;
-import com.xncoding.trans.dao.entity.User;
-import com.xncoding.trans.dao.repository.UserMapper;
+import com.xncoding.trans.entity.UserEntity;
+import com.xncoding.trans.mapper.UserMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.*;
@@ -27,13 +26,13 @@ public class UserService {
      * @return
      */
     @Cacheable(value = "userCache", key = "#id", unless="#result == null")
-    public User getById(int id) {
+    public UserEntity getById(int id) {
         logger.info("获取用户start...");
         return userMapper.selectById(id);
     }
 
     @Cacheable(value = "allUsersCache", unless = "#result.size() == 0")
-    public List<User> getAllUsers() {
+    public List<UserEntity> getAllUsers() {
         logger.info("获取所有用户列表");
         return userMapper.selectList(null);
     }
@@ -46,7 +45,7 @@ public class UserService {
             put = {@CachePut(value = "userCache", key = "#user.id")},
             evict = {@CacheEvict(value = "allUsersCache", allEntries = true)}
     )
-    public User createUser(User user) {
+    public UserEntity createUser(UserEntity user) {
         logger.info("创建用户start..., user.id=" + user.getId());
         userMapper.insert(user);
         return user;
@@ -60,7 +59,7 @@ public class UserService {
             put = {@CachePut(value = "userCache", key = "#user.id")},
             evict = {@CacheEvict(value = "allUsersCache", allEntries = true)}
     )
-    public User updateUser(User user) {
+    public UserEntity updateUser(UserEntity user) {
         logger.info("更新用户start...");
         userMapper.updateById(user);
         return user;

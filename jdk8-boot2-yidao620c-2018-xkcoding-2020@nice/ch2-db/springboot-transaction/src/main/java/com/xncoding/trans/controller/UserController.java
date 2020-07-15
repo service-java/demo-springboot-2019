@@ -1,6 +1,6 @@
 package com.xncoding.trans.controller;
 
-import com.xncoding.trans.dao.entity.User;
+import com.xncoding.trans.mapper.entity.User;
 import com.xncoding.trans.service.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

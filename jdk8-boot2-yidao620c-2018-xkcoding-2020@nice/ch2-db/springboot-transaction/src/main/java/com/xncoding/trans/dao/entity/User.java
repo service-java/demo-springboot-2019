@@ -1,4 +1,4 @@
-package com.xncoding.trans.dao.entity;
+package com.xncoding.trans.mapper.entity;
 
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
