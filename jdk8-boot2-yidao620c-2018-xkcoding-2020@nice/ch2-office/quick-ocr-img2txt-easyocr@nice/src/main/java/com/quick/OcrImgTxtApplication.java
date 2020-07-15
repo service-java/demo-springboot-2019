@@ -4,7 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.servlet.MultipartConfigElement;
 
@@ -17,9 +16,9 @@ import javax.servlet.MultipartConfigElement;
  */
 @SpringBootApplication
 //@EnableWebMvc
-public class Application {
+public class OcrImgTxtApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class,args);
+        SpringApplication.run(OcrImgTxtApplication.class,args);
     }
 
     /**

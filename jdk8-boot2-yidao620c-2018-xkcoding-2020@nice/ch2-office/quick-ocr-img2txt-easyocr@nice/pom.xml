@@ -80,7 +80,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.quick.Application</mainClass>
+                    <mainClass>com.quick.OcrImgTxtApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>
