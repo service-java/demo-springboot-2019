@@ -1,4 +1,4 @@
-package com.example.webflux.domain;
+package com.example.webflux.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * @author MrBird
  */
 @Document(collection = "user")
-public class User {
+public class UserEntity {
 
     @Id
     private String id;

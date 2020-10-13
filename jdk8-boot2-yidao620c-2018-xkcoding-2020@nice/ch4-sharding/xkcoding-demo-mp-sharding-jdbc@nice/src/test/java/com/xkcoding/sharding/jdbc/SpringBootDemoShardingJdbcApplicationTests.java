@@ -5,7 +5,7 @@ import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.xkcoding.sharding.jdbc.mapper.OrderMapper;
-import com.xkcoding.sharding.jdbc.model.Order;
+import com.xkcoding.sharding.jdbc.entity.OrderEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,7 +42,7 @@ public class SpringBootDemoShardingJdbcApplicationTests {
     public void testInsert() {
         for (long i = 1; i < 10; i++) {
             for (long j = 1; j < 20; j++) {
-                Order order = Order.builder().userId(i).orderId(j).remark(RandomUtil.randomString(20)).build();
+                OrderEntity order = OrderEntity.builder().userId(i).orderId(j).remark(RandomUtil.randomString(20)).build();
                 orderMapper.insert(order);
             }
         }
@@ -53,9 +53,9 @@ public class SpringBootDemoShardingJdbcApplicationTests {
      */
     @Test
     public void testUpdate() {
-        Order update = new Order();
+        OrderEntity update = new OrderEntity();
         update.setRemark("修改备注信息");
-        orderMapper.update(update, Wrappers.<Order>update().lambda().eq(Order::getOrderId, 2).eq(Order::getUserId, 2));
+        orderMapper.update(update, Wrappers.<OrderEntity>update().lambda().eq(OrderEntity::getOrderId, 2).eq(OrderEntity::getUserId, 2));
     }
 
     /**
@@ -71,7 +71,7 @@ public class SpringBootDemoShardingJdbcApplicationTests {
      */
     @Test
     public void testSelect() {
-        List<Order> orders = orderMapper.selectList(Wrappers.<Order>query().lambda().in(Order::getOrderId, 1, 2));
+        List<OrderEntity> orders = orderMapper.selectList(Wrappers.<OrderEntity>query().lambda().in(OrderEntity::getOrderId, 1, 2));
         log.info("【orders】= {}", JSONUtil.toJsonStr(orders));
     }
 

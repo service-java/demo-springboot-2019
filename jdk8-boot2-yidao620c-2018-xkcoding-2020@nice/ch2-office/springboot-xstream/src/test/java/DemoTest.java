@@ -24,8 +24,12 @@ import java.io.ByteArrayOutputStream;
  */
 public class DemoTest {
 
+    /**
+     * 模拟获取学生信息
+     * @return
+     */
     private Student getStudentDetails() {
-        Student student = new Student("Jack", "Rose");
+        Student student = new Student("JackXXXX", "Rose");
         student.setFirstName("Mahesh");
         student.setLastName("Parashar");
         student.setRollNo(1);
@@ -58,14 +62,15 @@ public class DemoTest {
      * Security framework of XStream not initialized, XStream is probably vulnerable.
      */
     @Test
-    public void demo() {
+    public void read() {
         XStream xstream = new XStream(new StaxDriver());
 
         Student student = this.getStudentDetails();
 
         //Object to XML Conversion
         String xml = xstream.toXML(student);
-        System.out.println(formatXml(xml));
+
+        // System.out.println(formatXml(xml));
 
         //XML to Object Conversion
         Student student1 = (Student) xstream.fromXML(xml);
@@ -88,6 +93,7 @@ public class DemoTest {
         String xml = xstream.toXML(student);
         System.out.println(formatXml(xml));
 
+// 输出 ===
 //     <?xml version="1.0" encoding="UTF-8"?>
 //     <com.xncoding.pos.entity.Student>
 //       <name>Jack,Rose</name>

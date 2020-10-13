@@ -1,6 +1,6 @@
 package com.example.webflux.controller;
 
-import com.example.webflux.domain.User;
+import com.example.webflux.entity.UserEntity;
 import com.example.webflux.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,7 +24,7 @@ public class UserController {
      * 以数组的形式一次性返回所有数据
      */
     @GetMapping
-    public Flux<User> getUsers() {
+    public Flux<UserEntity> getUsers() {
         return userService.getUsers();
     }
 
@@ -32,12 +32,12 @@ public class UserController {
      * 以 Server sent events形式多次返回数据
      */
     @GetMapping(value = "/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<User> getUsersStream() {
+    public Flux<UserEntity> getUsersStream() {
         return userService.getUsers();
     }
 
     @PostMapping
-    public Mono<User> createUser(User user) {
+    public Mono<UserEntity> createUser(UserEntity user) {
         return userService.createUser(user);
     }
 
@@ -56,7 +56,7 @@ public class UserController {
      * 不存在返回 404
      */
     @PutMapping("/{id}")
-    public Mono<ResponseEntity<User>> updateUser(@PathVariable String id, User user) {
+    public Mono<ResponseEntity<UserEntity>> updateUser(@PathVariable String id, UserEntity user) {
         return userService.updateUser(id, user)
                 .map(u -> new ResponseEntity<>(u, HttpStatus.OK))
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
@@ -67,7 +67,7 @@ public class UserController {
      * 存在返回，不存在返回 404
      */
     @GetMapping("/{id}")
-    public Mono<ResponseEntity<User>> getUser(@PathVariable String id) {
+    public Mono<ResponseEntity<UserEntity>> getUser(@PathVariable String id) {
         return userService.getUser(id)
                 .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
@@ -77,12 +77,12 @@ public class UserController {
      * 根据年龄段来查找
      */
     @GetMapping("/age/{from}/{to}")
-    public Flux<User> getUserByAge(@PathVariable Integer from, @PathVariable Integer to) {
+    public Flux<UserEntity> getUserByAge(@PathVariable Integer from, @PathVariable Integer to) {
         return userService.getUserByAge(from, to);
     }
 
     @GetMapping(value = "/stream/age/{from}/{to}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<User> getUserByAgeStream(@PathVariable Integer from, @PathVariable Integer to) {
+    public Flux<UserEntity> getUserByAgeStream(@PathVariable Integer from, @PathVariable Integer to) {
         return userService.getUserByAge(from, to);
     }
 
@@ -90,12 +90,12 @@ public class UserController {
      * 根据用户名查找
      */
     @GetMapping("/name/{name}")
-    public Flux<User> getUserByName(@PathVariable String name) {
+    public Flux<UserEntity> getUserByName(@PathVariable String name) {
         return userService.getUserByName(name);
     }
 
     @GetMapping(value = "/stream/name/{name}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<User> getUserByNameStream(@PathVariable String name) {
+    public Flux<UserEntity> getUserByNameStream(@PathVariable String name) {
         return userService.getUserByName(name);
     }
 
@@ -103,12 +103,12 @@ public class UserController {
      * 根据用户描述模糊查找
      */
     @GetMapping("/description/{description}")
-    public Flux<User> getUserByDescription(@PathVariable String description) {
+    public Flux<UserEntity> getUserByDescription(@PathVariable String description) {
         return userService.getUserByDescription(description);
     }
 
     @GetMapping(value = "/stream/description/{description}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<User> getUserByDescriptionStream(@PathVariable String description) {
+    public Flux<UserEntity> getUserByDescriptionStream(@PathVariable String description) {
         return userService.getUserByDescription(description);
     }
 
@@ -116,12 +116,12 @@ public class UserController {
      * 根据多个检索条件查询
      */
     @GetMapping("/condition")
-    public Flux<User> getUserByCondition(int size, int page, User user) {
+    public Flux<UserEntity> getUserByCondition(int size, int page, UserEntity user) {
         return userService.getUserByCondition(size, page, user);
     }
 
     @GetMapping("/condition/count")
-    public Mono<Long> getUserByConditionCount(User user) {
+    public Mono<Long> getUserByConditionCount(UserEntity user) {
         return userService.getUserByConditionCount(user);
     }
 }

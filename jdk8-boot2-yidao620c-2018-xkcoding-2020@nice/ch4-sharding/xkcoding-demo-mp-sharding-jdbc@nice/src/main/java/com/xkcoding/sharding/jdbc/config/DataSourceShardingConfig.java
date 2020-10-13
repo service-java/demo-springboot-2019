@@ -2,6 +2,7 @@ package com.xkcoding.sharding.jdbc.config;
 
 import cn.hutool.core.lang.Snowflake;
 import cn.hutool.core.util.IdUtil;
+import com.xkcoding.sharding.jdbc.config.generator.CustomSnowflakeKeyGenerator;
 import com.zaxxer.hikari.HikariDataSource;
 import io.shardingsphere.api.config.rule.ShardingRuleConfiguration;
 import io.shardingsphere.api.config.rule.TableRuleConfiguration;

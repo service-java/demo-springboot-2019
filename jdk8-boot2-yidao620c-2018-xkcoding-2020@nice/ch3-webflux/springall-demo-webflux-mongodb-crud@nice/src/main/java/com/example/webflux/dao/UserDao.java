@@ -1,6 +1,6 @@
 package com.example.webflux.dao;
 
-import com.example.webflux.domain.User;
+import com.example.webflux.entity.UserEntity;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
  * @author MrBird
  */
 @Repository
-public interface UserDao extends ReactiveMongoRepository<User, String> {
+public interface UserDao extends ReactiveMongoRepository<UserEntity, String> {
 
     /**
      * 根据年龄段来查找
@@ -18,7 +18,7 @@ public interface UserDao extends ReactiveMongoRepository<User, String> {
      * @param to   to
      * @return Flux<User>
      */
-    Flux<User> findByAgeBetween(Integer from, Integer to);
+    Flux<UserEntity> findByAgeBetween(Integer from, Integer to);
 
     /**
      * 更具描述来模糊查询用户
@@ -26,7 +26,7 @@ public interface UserDao extends ReactiveMongoRepository<User, String> {
      * @param description 描述
      * @return Flux<User>
      */
-    Flux<User> findByDescriptionIsLike(String description);
+    Flux<UserEntity> findByDescriptionIsLike(String description);
 
     /**
      * 通过用户名查询
@@ -34,6 +34,6 @@ public interface UserDao extends ReactiveMongoRepository<User, String> {
      * @param name 用户名
      * @return Flux<User>
      */
-    Flux<User> findByNameEquals(String name);
+    Flux<UserEntity> findByNameEquals(String name);
 
 }

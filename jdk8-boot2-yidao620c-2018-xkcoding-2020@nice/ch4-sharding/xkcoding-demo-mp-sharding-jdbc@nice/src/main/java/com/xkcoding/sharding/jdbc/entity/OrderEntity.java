@@ -1,4 +1,4 @@
-package com.xkcoding.sharding.jdbc.model;
+package com.xkcoding.sharding.jdbc.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @TableName(value = "t_order")
-public class Order {
+public class OrderEntity {
     /**
      * 主键
      */

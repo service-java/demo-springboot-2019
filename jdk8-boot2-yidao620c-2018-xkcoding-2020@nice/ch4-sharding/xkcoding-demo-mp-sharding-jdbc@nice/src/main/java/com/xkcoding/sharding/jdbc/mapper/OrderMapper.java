@@ -1,7 +1,7 @@
 package com.xkcoding.sharding.jdbc.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.xkcoding.sharding.jdbc.model.Order;
+import com.xkcoding.sharding.jdbc.entity.OrderEntity;
 import org.springframework.stereotype.Component;
 
 /**
@@ -18,5 +18,5 @@ import org.springframework.stereotype.Component;
  * @modified: yangkai.shen
  */
 @Component
-public interface OrderMapper extends BaseMapper<Order> {
+public interface OrderMapper extends BaseMapper<OrderEntity> {
 }

@@ -46,11 +46,24 @@
 	<build>
 		<finalName>spring-boot-demo-helloworld</finalName>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <fork>true</fork>
+<!--                    <mainClass>${start-class}</mainClass>-->
+                </configuration>
+            </plugin>
 		</plugins>
+
 	</build>
 
 </project>

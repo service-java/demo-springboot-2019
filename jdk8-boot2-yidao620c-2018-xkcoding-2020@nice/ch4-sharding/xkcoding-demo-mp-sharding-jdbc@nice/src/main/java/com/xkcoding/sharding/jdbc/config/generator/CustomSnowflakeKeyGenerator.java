@@ -1,4 +1,4 @@
-package com.xkcoding.sharding.jdbc.config;
+package com.xkcoding.sharding.jdbc.config.generator;
 
 import cn.hutool.core.lang.Snowflake;
 import io.shardingsphere.core.keygen.KeyGenerator;

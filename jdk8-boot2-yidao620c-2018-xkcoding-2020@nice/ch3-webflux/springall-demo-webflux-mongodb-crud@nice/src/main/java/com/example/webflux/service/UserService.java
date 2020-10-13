@@ -1,7 +1,7 @@
 package com.example.webflux.service;
 
 import com.example.webflux.dao.UserDao;
-import com.example.webflux.domain.User;
+import com.example.webflux.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -25,11 +25,11 @@ public class UserService {
     @Autowired
     private ReactiveMongoTemplate template;
 
-    public Flux<User> getUsers() {
+    public Flux<UserEntity> getUsers() {
         return userDao.findAll();
     }
 
-    public Mono<User> getUser(String id) {
+    public Mono<UserEntity> getUser(String id) {
         return this.userDao.findById(id);
     }
 
@@ -37,7 +37,7 @@ public class UserService {
      * 新增和修改都是 save方法，
      * id 存在为修改，id 不存在为新增
      */
-    public Mono<User> createUser(User user) {
+    public Mono<UserEntity> createUser(UserEntity user) {
         return userDao.save(user);
     }
 
@@ -46,7 +46,7 @@ public class UserService {
                 .flatMap(user -> this.userDao.delete(user));
     }
 
-    public Mono<User> updateUser(String id, User user) {
+    public Mono<UserEntity> updateUser(String id, UserEntity user) {
         return this.userDao.findById(id)
                 .flatMap(u -> {
                     u.setName(user.getName());
@@ -56,15 +56,15 @@ public class UserService {
                 });
     }
 
-    public Flux<User> getUserByAge(Integer from, Integer to) {
+    public Flux<UserEntity> getUserByAge(Integer from, Integer to) {
         return this.userDao.findByAgeBetween(from, to);
     }
 
-    public Flux<User> getUserByName(String name) {
+    public Flux<UserEntity> getUserByName(String name) {
         return this.userDao.findByNameEquals(name);
     }
 
-    public Flux<User> getUserByDescription(String description) {
+    public Flux<UserEntity> getUserByDescription(String description) {
         return this.userDao.findByDescriptionIsLike(description);
     }
 
@@ -72,23 +72,23 @@ public class UserService {
      * 分页查询，只返回分页后的数据，count值需要通过 getUserByConditionCount
      * 方法获取
      */
-    public Flux<User> getUserByCondition(int size, int page, User user) {
+    public Flux<UserEntity> getUserByCondition(int size, int page, UserEntity user) {
         Query query = getQuery(user);
         Sort sort = new Sort(Sort.Direction.DESC, "age");
         Pageable pageable = PageRequest.of(page, size, sort);
 
-        return template.find(query.with(pageable), User.class);
+        return template.find(query.with(pageable), UserEntity.class);
     }
 
     /**
      * 返回 count，配合 getUserByCondition使用
      */
-    public Mono<Long> getUserByConditionCount(User user) {
+    public Mono<Long> getUserByConditionCount(UserEntity user) {
         Query query = getQuery(user);
-        return template.count(query, User.class);
+        return template.count(query, UserEntity.class);
     }
 
-    private Query getQuery(User user) {
+    private Query getQuery(UserEntity user) {
         Query query = new Query();
         Criteria criteria = new Criteria();
 
