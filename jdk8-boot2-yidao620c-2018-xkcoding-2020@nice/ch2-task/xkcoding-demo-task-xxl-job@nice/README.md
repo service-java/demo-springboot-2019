@@ -2,6 +2,14 @@
 
 > 此 demo 主要演示了 Spring Boot 如何集成 XXL-JOB 实现分布式定时任务，并提供绕过 `xxl-job-admin` 对定时任务的管理的方法，包括定时任务列表，触发器列表，新增定时任务，删除定时任务，停止定时任务，启动定时任务，修改定时任务，手动触发定时任务。
 
+- http://localhost:8080/demo/xxl-job/group
+- http://localhost:8080/demo/xxl-job/list?page=1&size=2
+- http://localhost:8080/demo/xxl-job/add
+- http://localhost:8080/demo/xxl-job/trigger
+- http://localhost:8080/demo/xxl-job/remove
+- http://localhost:8080/demo/xxl-job/stop
+- http://localhost:8080/demo/xxl-job/start
+
 ## 1. xxl-job-admin调度中心
 
 > https://github.com/xuxueli/xxl-job.git

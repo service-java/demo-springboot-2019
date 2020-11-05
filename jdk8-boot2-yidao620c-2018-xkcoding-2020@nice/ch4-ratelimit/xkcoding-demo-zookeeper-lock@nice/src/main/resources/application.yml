@@ -4,6 +4,6 @@ server:
     context-path: /demo
 
 zk:
-  url: 127.0.0.1:2181
+  url: example.com:2181
   timeout: 1000
   retry: 3
