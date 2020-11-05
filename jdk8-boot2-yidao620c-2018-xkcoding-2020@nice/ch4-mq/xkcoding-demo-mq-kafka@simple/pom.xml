@@ -3,18 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-demo-mq-rabbitmq</artifactId>
+    <artifactId>spring-boot-demo-mq-kafka</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>spring-boot-demo-mq-rabbitmq</name>
+    <name>spring-boot-demo-mq-kafka</name>
     <description>Demo project for Spring Boot</description>
 
     <groupId>com.xkcoding</groupId>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.RELEASE</version>
+        <version>2.1.0.RELEASE</version>
     </parent>
 
     <properties>
@@ -26,12 +26,12 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
         </dependency>
 
         <dependency>
@@ -49,16 +49,18 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
+            <version>4.6.6</version>
         </dependency>
 
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
+            <version>28.1-jre</version>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>spring-boot-demo-mq-rabbitmq</finalName>
+        <finalName>spring-boot-demo-mq-kafka</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

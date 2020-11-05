@@ -2,6 +2,9 @@
 
 > 本 demo 主要演示了 Spring Boot 如何集成 kafka，实现消息的发送和接收。
 
+- ./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+
 ## 环境准备
 
 > 注意：本 demo 基于 Spring Boot 2.1.0.RELEASE 版本，因此 spring-kafka 的版本为 2.2.0.RELEASE，kafka-clients 的版本为2.0.0，所以 kafka 的版本选用为  kafka_2.11-2.1.0

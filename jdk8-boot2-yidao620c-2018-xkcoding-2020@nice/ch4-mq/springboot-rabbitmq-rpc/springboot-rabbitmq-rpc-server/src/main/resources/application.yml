@@ -15,9 +15,9 @@ spring:
 spring:
   profiles: dev
   rabbitmq:
-    host: 127.0.0.1
+    host: example.com
     port: 5672
-    username: spring
+    username: admin
     password: 123456
 #    publisher-confirms: true #支持发布确认
 #    publisher-returns: true  #支持发布返回
