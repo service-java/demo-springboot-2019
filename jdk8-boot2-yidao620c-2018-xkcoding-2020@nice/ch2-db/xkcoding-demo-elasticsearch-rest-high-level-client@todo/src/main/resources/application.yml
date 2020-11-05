@@ -1,0 +1,9 @@
+demo:
+  data:
+    elasticsearch:
+      # 注意要配对这个名字
+      cluster-name: docker-cluster
+      cluster-nodes: example.com:9200
+      index:
+        number-of-replicas: 0
+        number-of-shards: 3

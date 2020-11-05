@@ -1,0 +1,6 @@
+spring:
+  data:
+    elasticsearch:
+      # 注意要配对这个名字
+      cluster-name: docker-cluster
+      cluster-nodes: example.com:9300
