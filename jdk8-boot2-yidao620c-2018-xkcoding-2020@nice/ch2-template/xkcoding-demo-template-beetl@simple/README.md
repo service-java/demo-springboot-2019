@@ -2,6 +2,8 @@
 
 > 本 demo 主要演示了 Spring Boot 项目如何集成 beetl 模板引擎
 
+- http://localhost:8080/demo/
+
 ## pom.xml
 
 ```xml
