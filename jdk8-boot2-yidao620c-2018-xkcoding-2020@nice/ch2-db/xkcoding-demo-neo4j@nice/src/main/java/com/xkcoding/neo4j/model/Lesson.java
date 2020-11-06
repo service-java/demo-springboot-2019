@@ -44,7 +44,7 @@ public class Lesson {
     /**
      * 任教老师
      */
-    @Relationship(NeoConsts.R_TEACHER_OF_LESSON)
+    @Relationship(type = NeoConsts.R_TEACHER_OF_LESSON)
     @NonNull
     private Teacher teacher;
 }

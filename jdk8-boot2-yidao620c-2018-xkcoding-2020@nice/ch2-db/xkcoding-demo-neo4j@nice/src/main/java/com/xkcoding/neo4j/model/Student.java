@@ -8,15 +8,17 @@ import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
 
+import java.util.List;
+
 /**
  * <p>
- * 班级节点
+ * 学生节点
  * </p>
  *
  * @package: com.xkcoding.neo4j.model
- * @description: 班级节点
+ * @description: 学生节点
  * @author: yangkai.shen
- * @date: Created in 2018-12-24 14:44
+ * @date: Created in 2018-12-24 14:38
  * @copyright: Copyright (c) 2018
  * @version: V1.0
  * @modified: yangkai.shen
@@ -27,24 +29,32 @@ import org.neo4j.ogm.annotation.Relationship;
 @AllArgsConstructor
 @Builder
 @NodeEntity
-public class Class {
+public class Student {
     /**
-     * 主键
+     * 主键，自定义主键策略，使用UUID生成
      */
     @Id
     @GeneratedValue(strategy = CustomIdStrategy.class)
     private String id;
 
     /**
-     * 班级名称
+     * 学生姓名
      */
     @NonNull
     private String name;
 
     /**
-     * 班级的班主任
+     * 学生选的所有课程
      */
-    @Relationship(NeoConsts.R_BOSS_OF_CLASS)
+    @Relationship(type = NeoConsts.R_LESSON_OF_STUDENT)
     @NonNull
-    private Teacher boss;
+    private List<Lesson> lessons;
+
+    /**
+     * 学生所在班级
+     */
+    @Relationship(type = NeoConsts.R_STUDENT_OF_CLASS)
+    @NonNull
+    private Class clazz;
+
 }

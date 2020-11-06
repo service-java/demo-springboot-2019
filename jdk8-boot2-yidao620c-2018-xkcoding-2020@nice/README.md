@@ -6,6 +6,7 @@
     - https://github.com/vector4wang/spring-boot-quick
     - https://github.com/yidao620c/SpringBootBucket
 
+- 工程里带@todo就是没搞好的, 不要看
 - 有父级pom维护起来方便, 但为了demo的cv搬运方便直接去掉了
 
 - 基础模板

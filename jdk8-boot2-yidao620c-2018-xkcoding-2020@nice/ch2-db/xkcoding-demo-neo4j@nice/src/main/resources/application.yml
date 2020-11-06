@@ -1,0 +1,7 @@
+spring:
+  data:
+    neo4j:
+      uri: bolt://example.com
+      username: neo4j
+      password: neo4j-password
+      open-in-view: false
