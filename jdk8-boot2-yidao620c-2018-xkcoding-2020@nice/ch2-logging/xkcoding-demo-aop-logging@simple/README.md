@@ -2,6 +2,8 @@
 
 > 此 demo 主要是演示如何使用 aop 切面对请求进行日志记录，并且记录 UserAgent 信息。
 
+- http://localhost:8089/demo/test
+
 ## pom.xml
 
 ```xml
@@ -55,6 +57,7 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
+<version>4.6.6</version>
 		</dependency>
 
 		<!-- 解析 UserAgent 信息 -->

@@ -7,7 +7,7 @@ target/
 *.iml
 *.ipr
 *.iws
-*.log
+#*.log
 .svn/
 .project
 rebel.xml

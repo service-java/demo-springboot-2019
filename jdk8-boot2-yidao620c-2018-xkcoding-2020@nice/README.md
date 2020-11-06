@@ -7,12 +7,12 @@
     - https://github.com/yidao620c/SpringBootBucket
 
 - 工程里带@todo就是没搞好的, 不要看
-- 有父级pom维护起来方便, 但为了demo的cv搬运方便直接去掉了
+- 有父级pom维护起来方便, 但为了demo的搬运运行方便直接去掉了
 
 - 基础模板
     - springboot-demo --> 基础
-    - quick-modules-demo --> 多模块
-    - xkcoding-dubbo-demo --> 远程通信
+    - springboot-modules-demo --> 多模块
+    - springboot-dubbo-demo --> 远程通信
     
 - 公共依赖
 
