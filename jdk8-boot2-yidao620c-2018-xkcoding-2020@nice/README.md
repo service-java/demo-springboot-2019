@@ -26,6 +26,9 @@ mysql + mybatis-plus
 lombok     
 ```
 
+# TODO
+
+- 将相关url尽量改成example.com, 然后用switchhost映射
     
 # 常见问题 @faq
 
