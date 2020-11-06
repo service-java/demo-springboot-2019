@@ -14,6 +14,7 @@ import java.util.List;
 
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
+
     @Bean
     public FilterRegistrationBean timeFilter() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
