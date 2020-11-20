@@ -74,4 +74,5 @@
 		<appender-ref ref="FILE_INFO"/>
 		<appender-ref ref="FILE_ERROR"/>
 	</root>
+
 </configuration>
