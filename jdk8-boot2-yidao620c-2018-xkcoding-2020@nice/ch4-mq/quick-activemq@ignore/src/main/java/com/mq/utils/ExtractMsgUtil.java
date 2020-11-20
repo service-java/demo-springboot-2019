@@ -32,7 +32,7 @@ public class ExtractMsgUtil {
 
     public static void getMQMsg() throws JMSException {
         ConnectionFactory connectionFactory =
-                new ActiveMQConnectionFactory("tcp://x.x.x.x:61616");
+                new ActiveMQConnectionFactory("tcp://example.com:61616");
         Connection connection =
                 connectionFactory.createConnection("admin","admin");
         connection.start();

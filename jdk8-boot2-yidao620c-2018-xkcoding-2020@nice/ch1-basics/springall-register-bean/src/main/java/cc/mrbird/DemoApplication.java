@@ -56,6 +56,8 @@ public class DemoApplication {
         Object cherryFactoryBean = context.getBean("&cherryFactoryBean");
         System.out.println(cherryFactoryBean.getClass());
 
+
+//        SpringApplication.run(DemoApplication.class);
     }
 }
 

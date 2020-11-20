@@ -1,0 +1,22 @@
+server:
+  port: 8092
+
+spring:
+  thymeleaf:
+    mode: HTML
+    cache: false
+  mvc:
+    view:
+      prefix: /templates
+
+
+logging:
+  level:
+    ROOT: INFO
+    com:
+      xncoding: DEBUG
+    org.springframework.web.servlet: ERROR
+
+  file: D:/logs/app.log
+
+

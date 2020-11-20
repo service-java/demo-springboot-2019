@@ -12,9 +12,9 @@
 
     <modules>
         <module>common</module>
-        <module>service1</module>
-        <module>service2</module>
-        <module>test</module>
+        <module>service-demo-city</module>
+        <module>service-demo-country</module>
+<!--        <module>test</module>-->
     </modules>
 
     <properties>

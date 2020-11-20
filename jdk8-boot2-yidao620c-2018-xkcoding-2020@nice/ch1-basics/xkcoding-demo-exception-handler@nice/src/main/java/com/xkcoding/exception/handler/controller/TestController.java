@@ -35,4 +35,13 @@ public class TestController {
 	public ModelAndView pageException() {
 		throw new PageException(Status.UNKNOWN_ERROR);
 	}
+
+    /**
+     * @todo 如何传递code到error.html上??
+     * @return
+     */
+    @GetMapping("/page2")
+    public ModelAndView pageException2() {
+        throw new PageException(-1, "出问题");
+    }
 }

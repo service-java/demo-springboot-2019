@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://cdn.bootcss.com/element-ui/2.8.2/theme-chalk/index.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+<div id="app" v-cloak>
+    <el-upload
+      name="imgFile"
+      class="upload-demo"
+      action="/upload"
+      multiple
+      :limit="1"
+      >
+
+      <el-button size="small" type="primary">点击上传</el-button>
+      <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+    </el-upload>
+
+</div>
+
+
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.8.2/index.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.8.2/locale/zh-CN.min.js"></script>
+
+<script>
+  const vueInstance = new Vue({
+    el: '#app',
+    data: {
+
+    },
+
+    methods: {
+
+
+    }
+  })
+
+</script>
+
+</body>
+</html>
