@@ -1,0 +1,15 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: Spring Boot Admin Web
+  boot:
+    admin:
+      url: http://localhost:${server.port}
+
+  jackson:
+    serialization:
+      indent_output: true
+
+
