@@ -8,6 +8,8 @@
 >
 > 密码：123456
 
+- http://127.0.0.1:8080/demo/swagger-ui.html
+
 ## pom.xml
 
 ```xml
