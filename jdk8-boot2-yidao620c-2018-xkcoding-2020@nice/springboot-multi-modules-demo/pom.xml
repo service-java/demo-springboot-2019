@@ -12,9 +12,8 @@
 
     <modules>
         <module>common</module>
-        <module>service-demo-city</module>
-        <module>service-demo-country</module>
-<!--        <module>test</module>-->
+        <module>module-city</module>
+        <module>module-country</module>
     </modules>
 
     <properties>
