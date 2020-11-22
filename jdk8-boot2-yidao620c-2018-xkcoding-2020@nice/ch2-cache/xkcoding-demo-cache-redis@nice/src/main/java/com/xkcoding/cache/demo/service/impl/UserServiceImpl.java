@@ -1,8 +1,8 @@
-package com.xkcoding.cache.redis.service.impl;
+package com.xkcoding.cache.demo.service.impl;
 
 import com.google.common.collect.Maps;
-import com.xkcoding.cache.redis.entity.User;
-import com.xkcoding.cache.redis.service.UserService;
+import com.xkcoding.cache.demo.entity.User;
+import com.xkcoding.cache.demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;

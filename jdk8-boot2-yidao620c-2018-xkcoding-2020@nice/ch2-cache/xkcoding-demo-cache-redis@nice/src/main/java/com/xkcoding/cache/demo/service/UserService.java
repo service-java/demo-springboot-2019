@@ -1,6 +1,6 @@
-package com.xkcoding.cache.redis.service;
+package com.xkcoding.cache.demo.service;
 
-import com.xkcoding.cache.redis.entity.User;
+import com.xkcoding.cache.demo.entity.User;
 
 /**
  * <p>

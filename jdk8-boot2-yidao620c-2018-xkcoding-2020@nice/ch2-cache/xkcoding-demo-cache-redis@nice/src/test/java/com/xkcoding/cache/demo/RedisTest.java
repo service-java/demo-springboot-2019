@@ -1,6 +1,6 @@
-package com.xkcoding.cache.redis;
+package com.xkcoding.cache.demo;
 
-import com.xkcoding.cache.redis.entity.User;
+import com.xkcoding.cache.demo.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

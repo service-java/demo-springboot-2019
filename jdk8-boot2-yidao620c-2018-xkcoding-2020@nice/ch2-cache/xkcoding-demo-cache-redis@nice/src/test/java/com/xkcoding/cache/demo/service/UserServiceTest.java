@@ -1,7 +1,7 @@
-package com.xkcoding.cache.redis.service;
+package com.xkcoding.cache.demo.service;
 
-import com.xkcoding.cache.redis.SpringBootDemoCacheRedisApplicationTests;
-import com.xkcoding.cache.redis.entity.User;
+import com.xkcoding.cache.demo.SpringBootDemoCacheRedisApplicationTests;
+import com.xkcoding.cache.demo.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

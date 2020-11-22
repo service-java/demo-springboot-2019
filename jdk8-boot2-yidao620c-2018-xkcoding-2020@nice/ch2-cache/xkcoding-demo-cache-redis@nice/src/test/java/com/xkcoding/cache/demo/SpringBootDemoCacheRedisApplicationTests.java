@@ -1,4 +1,4 @@
-package com.xkcoding.cache.redis;
+package com.xkcoding.cache.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
