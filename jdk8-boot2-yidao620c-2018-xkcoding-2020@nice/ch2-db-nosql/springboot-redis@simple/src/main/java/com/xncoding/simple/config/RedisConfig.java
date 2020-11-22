@@ -1,4 +1,4 @@
-package com.xncoding.pos.config;
+package com.xncoding.simple.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

@@ -7,7 +7,7 @@
     - https://github.com/yidao620c/SpringBootBucket
 
 - 工程里带@todo, @ignore的就是没搞好的, 不要看, 浪费时间
-- 有父级pom维护起来方便, 但为了demo的搬运运行方便直接去掉了
+- 有父级pom维护起来方便, 但这里为了demo的搬运方便去掉了
 
 - 基础模板
     - springboot-demo --> 基础

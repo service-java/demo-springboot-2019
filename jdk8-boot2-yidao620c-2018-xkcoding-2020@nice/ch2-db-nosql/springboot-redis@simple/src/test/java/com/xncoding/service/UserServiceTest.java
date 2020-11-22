@@ -1,8 +1,8 @@
 package com.xncoding.service;
 
-import com.xncoding.pos.RedisApplication;
-import com.xncoding.pos.dao.entity.User;
-import com.xncoding.pos.service.UserService;
+import com.xncoding.simple.RedisApplication;
+import com.xncoding.simple.dao.entity.User;
+import com.xncoding.simple.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

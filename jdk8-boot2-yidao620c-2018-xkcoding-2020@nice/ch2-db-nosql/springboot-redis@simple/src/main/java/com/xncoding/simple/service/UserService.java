@@ -1,7 +1,7 @@
-package com.xncoding.pos.service;
+package com.xncoding.simple.service;
 
-import com.xncoding.pos.dao.entity.User;
-import com.xncoding.pos.dao.repository.UserMapper;
+import com.xncoding.simple.dao.entity.User;
+import com.xncoding.simple.dao.repository.UserMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;

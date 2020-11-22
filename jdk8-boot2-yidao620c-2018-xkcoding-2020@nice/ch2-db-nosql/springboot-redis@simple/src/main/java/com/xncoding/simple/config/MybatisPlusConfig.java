@@ -1,4 +1,4 @@
-package com.xncoding.pos.config;
+package com.xncoding.simple.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
